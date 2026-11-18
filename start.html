@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Start a Project — PackIt Studio | Surat, Gujarat</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <meta name="description" content="Let's build a distinctive brand identity and packaging system for your business. Connect with PackIt Studio in Surat, Gujarat." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <style>
+    .project-hero {
+      padding-top: calc(var(--nav-height) + var(--space-16));
+      padding-bottom: var(--space-20);
+      background: var(--canvas);
+    }
+    .project-hero__title {
+      font-size: clamp(var(--text-4xl), 6vw, var(--text-6xl));
+      margin-bottom: var(--space-6);
+      max-width: 800px;
+    }
+    .project-hero__sub {
+      font-size: var(--text-lg);
+      color: var(--ink-muted);
+      max-width: 580px;
+      margin-bottom: var(--space-16);
+    }
+    .project-form {
+      background: var(--canvas-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-12);
+      max-width: 820px;
+      box-shadow: var(--shadow-lg);
+    }
+    .form-group {
+      margin-bottom: var(--space-10);
+    }
+    .form-label {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: var(--text-md);
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: var(--space-4);
+    }
+    .pill-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+    }
+    .pill-option {
+      cursor: pointer;
+    }
+    .pill-option input {
+      display: none;
+    }
+    .pill-badge {
+      display: inline-block;
+      padding: var(--space-3) var(--space-6);
+      border-radius: var(--radius-pill);
+      border: 1.5px solid var(--border);
+      font-family: var(--font-sans);
+      font-size: var(--text-sm);
+      color: var(--ink-mid);
+      background: var(--canvas-off);
+      transition: all var(--duration-fast) var(--ease-out);
+      user-select: none;
+    }
+    .pill-option input:checked + .pill-badge {
+      background: var(--ink);
+      color: var(--canvas);
+      border-color: var(--ink);
+    }
+    .pill-option:hover .pill-badge {
+      border-color: var(--ink);
+    }
+    .input-text, .input-textarea {
+      width: 100%;
+      padding: var(--space-4) var(--space-5);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      color: var(--ink);
+      background: var(--canvas);
+      transition: border-color var(--duration-fast);
+      box-sizing: border-box;
+    }
+    .input-text:focus, .input-textarea:focus {
+      outline: none;
+      border-color: var(--yellow);
+      background: #FFFFFF;
+    }
+    .input-textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-4);
+    }
+    @media (max-width: 640px) {
+      .form-row { grid-template-columns: 1fr; }
+      .project-form { padding: var(--space-6); }
+    }
+    .submit-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: var(--space-8);
+      gap: var(--space-4);
+    }
+    .form-success-message {
+      display: none;
+      padding: var(--space-6);
+      background: var(--yellow-light);
+      border: 1px solid var(--yellow);
+      border-radius: var(--radius-md);
+      font-family: var(--font-sans);
+      font-weight: 600;
+      color: var(--ink);
+      text-align: center;
+      margin-top: var(--space-6);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled" id="main-nav">
+    <a href="/index.html" class="nav__logo" aria-label="PackIt">
+      <img src="assets/images/logo.png" alt="PackIt" class="nav__logo-img" />
+    </a>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="/work.html">Work</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/approach.html">Approach</a></li>
+      <li><a href="/industries.html">Industries</a></li>
+      <li><a href="/about.html">About</a></li>
+    </ul>
+    <a href="/start.html" class="btn btn--primary nav__cta">Start a project</a>
+    <button class="nav__burger" id="nav-burger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="project-hero">
+    <div class="container">
+      <p class="section-label">Start a Project &middot; Surat, Gujarat</p>
+      <h1 class="project-hero__title">Let's give your business<br/><em>its own true identity.</em></h1>
+      <p class="project-hero__sub">Whether you're launching a new venture in Surat, scaling a homegrown brand across Gujarat, or taking your products pan-India — we're here to build your complete brand identity and packaging. Tell us what you're making.</p>
+
+      <form class="project-form" id="projectForm" onsubmit="event.preventDefault(); document.getElementById('successMsg').style.display = 'block'; this.reset();">
+        <div class="form-group">
+          <label class="form-label">What are you building?</label>
+          <div class="pill-grid">
+            <label class="pill-option"><input type="checkbox" name="product" value="food"><span class="pill-badge">Food &amp; Snacks</span></label>
+            <label class="pill-option"><input type="checkbox" name="product" value="beverage"><span class="pill-badge">Beverages</span></label>
+            <label class="pill-option"><input type="checkbox" name="product" value="textile"><span class="pill-badge">Textiles &amp; Apparel</span></label>
+            <label class="pill-option"><input type="checkbox" name="product" value="beauty"><span class="pill-badge">Beauty &amp; Personal Care</span></label>
+            <label class="pill-option"><input type="checkbox" name="product" value="d2c"><span class="pill-badge">D2C &amp; E-commerce</span></label>
+            <label class="pill-option"><input type="checkbox" name="product" value="other"><span class="pill-badge">Other Local Venture</span></label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">What do you need?</label>
+          <div class="pill-grid">
+            <label class="pill-option"><input type="checkbox" name="need" value="identity"><span class="pill-badge">Brand Identity &amp; Logo</span></label>
+            <label class="pill-option"><input type="checkbox" name="need" value="packaging"><span class="pill-badge">Packaging &amp; Box Design</span></label>
+            <label class="pill-option"><input type="checkbox" name="need" value="full"><span class="pill-badge">Full Brand System (Identity + Packaging)</span></label>
+            <label class="pill-option"><input type="checkbox" name="need" value="strategy"><span class="pill-badge">Brand Strategy &amp; Positioning</span></label>
+            <label class="pill-option"><input type="checkbox" name="need" value="unsure"><span class="pill-badge">Need guidance / Let's talk</span></label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Your Name</label>
+            <input type="text" class="input-text" required placeholder="Your Name" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone or WhatsApp</label>
+            <input type="tel" class="input-text" required placeholder="+91 98765 43210" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Business / Brand Name</label>
+            <input type="text" class="input-text" placeholder="e.g. Surat Artisan Goods" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Location / City</label>
+            <input type="text" class="input-text" placeholder="e.g. Surat, Gujarat" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Tell us a little about your product and goals</label>
+          <textarea class="input-textarea" placeholder="We have a homegrown product line launching in Gujarat and need a complete identity and standout packaging..."></textarea>
+        </div>
+
+        <div class="scope-estimate-box" id="scopeEstimateBox" style="background:var(--canvas-off); border:1.5px solid var(--border); border-radius:var(--radius-md); padding:var(--space-4) var(--space-6); margin-bottom:var(--space-6); display:flex; align-items:center; justify-content:space-between; font-family:var(--font-sans); font-size:var(--text-xs); flex-wrap:wrap; gap:8px;">
+          <div>
+            <span style="font-weight:700; color:var(--ink);">Configured Scope:</span>
+            <span id="scopeSummaryText" style="color:var(--ink-mid); margin-left:6px;">Select category & services above</span>
+          </div>
+          <span style="color:var(--yellow-dark); font-weight:700;" id="timelineEstimate">Est. Timeline: 4–6 Weeks</span>
+        </div>
+
+        <div class="submit-bar">
+          <button type="submit" class="btn btn--primary btn--lg">Send project →</button>
+        </div>
+
+        <div class="form-success-message" id="successMsg">
+          ✦ Thank you! Your project briefing has been received. Our team will review your notes and reach out within 24 hours.
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/index.html" class="nav__logo" aria-label="PackIt">
+            <img src="assets/images/logo.png" alt="PackIt" class="nav__logo-img" />
+          </a>
+          <p class="footer__tagline">Branding &amp; Packaging Studio.<br/>Empowering local &amp; emerging businesses from Surat, Gujarat.</p>
+        </div>
+        <div class="footer__nav">
+          <div class="footer__col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="/services.html#strategy">Brand Strategy</a></li>
+              <li><a href="/services.html#identity">Brand Identity</a></li>
+              <li><a href="/services.html#packaging">Packaging Design</a></li>
+              <li><a href="/services.html#experience">Brand Experience</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Industries</h4>
+            <ul>
+              <li><a href="/industries.html#food">Food &amp; Beverage</a></li>
+              <li><a href="/industries.html#fashion">Fashion &amp; Apparel</a></li>
+              <li><a href="/industries.html#beauty">Beauty &amp; Care</a></li>
+              <li><a href="/industries.html#d2c">D2C &amp; E-commerce</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="/work.html">Work</a></li>
+              <li><a href="/approach.html">Approach</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/start.html">Start a Project</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 PackIt. All rights reserved.</p>
+        <p>Crafted in Surat, Gujarat, India</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('projectForm');
+      const scopeSummaryText = document.getElementById('scopeSummaryText');
+      const timelineEstimate = document.getElementById('timelineEstimate');
+
+      function calculateScope() {
+        const products = Array.from(form.querySelectorAll('input[name="product"]:checked')).map(i => i.parentElement.textContent.trim());
+        const needs = Array.from(form.querySelectorAll('input[name="need"]:checked')).map(i => i.parentElement.textContent.trim());
+
+        if (products.length === 0 && needs.length === 0) {
+          scopeSummaryText.textContent = 'Select category & services above';
+          timelineEstimate.textContent = 'Est. Timeline: 4–6 Weeks';
+          return;
+        }
+
+        const prodStr = products.length ? products.join(', ') : 'Product';
+        const needStr = needs.length ? needs.join(' + ') : 'Branding & Packaging';
+        scopeSummaryText.textContent = `${needStr} for ${prodStr}`;
+
+        if (needs.includes('Full Brand System')) {
+          timelineEstimate.textContent = 'Est. Timeline: 6–8 Weeks';
+        } else if (needs.length > 2) {
+          timelineEstimate.textContent = 'Est. Timeline: 5–7 Weeks';
+        } else {
+          timelineEstimate.textContent = 'Est. Timeline: 3–5 Weeks';
+        }
+      }
+
+      form.querySelectorAll('input[type="checkbox"]').forEach(box => {
+        box.addEventListener('change', calculateScope);
+      });
+    });
+  </script>
+</body>
+</html>

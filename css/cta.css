@@ -1,0 +1,61 @@
+/* ===========================
+   FINAL CTA — PackIt
+   =========================== */
+
+.final-cta {
+  padding: var(--space-48) 0;
+  background: var(--ink);
+  position: relative;
+  overflow: hidden;
+}
+
+.final-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 60% at 50% 50%, rgba(245,200,66,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.final-cta__inner {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.final-cta__pre {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: rgba(250,248,244,0.5);
+  text-transform: uppercase;
+  margin-bottom: var(--space-6);
+}
+
+.final-cta__headline {
+  font-family: var(--font-serif);
+  font-size: clamp(var(--text-4xl), 8vw, var(--text-6xl));
+  color: var(--canvas);
+  line-height: 1.1;
+  margin-bottom: var(--space-12);
+}
+
+.final-cta__headline em {
+  color: var(--yellow);
+  font-style: italic;
+}
+
+.final-cta .btn--primary {
+  background: var(--yellow);
+  color: var(--ink);
+  border-color: var(--yellow);
+}
+
+.final-cta .btn--primary:hover {
+  background: var(--canvas);
+  color: var(--ink);
+  border-color: var(--canvas);
+  box-shadow: 0 8px 32px rgba(245,200,66,0.3);
+}

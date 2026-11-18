@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capabilities &amp; Services — PackIt Studio | Surat, Gujarat</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <meta name="description" content="Brand identity, packaging design, and visual systems for local and emerging businesses by PackIt Studio in Surat, Gujarat." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <style>
+    .services-hero {
+      padding-top: calc(var(--nav-height) + var(--space-16));
+      padding-bottom: var(--space-16);
+      background: var(--canvas);
+    }
+    .service-section {
+      padding: var(--space-24) 0;
+      border-top: 1px solid var(--border);
+    }
+    .service-row {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: var(--space-16);
+    }
+    @media (max-width: 850px) {
+      .service-row { grid-template-columns: 1fr; gap: var(--space-8); }
+    }
+    .service-sticky {
+      position: sticky;
+      top: calc(var(--nav-height) + var(--space-8));
+      height: fit-content;
+    }
+    .service-num {
+      font-family: var(--font-sans);
+      font-size: var(--text-sm);
+      font-weight: 700;
+      color: var(--yellow-dark);
+      letter-spacing: 0.1em;
+      margin-bottom: var(--space-2);
+    }
+    .service-headline {
+      font-size: clamp(var(--text-3xl), 4vw, var(--text-5xl));
+      margin-bottom: var(--space-4);
+    }
+    .service-pitch {
+      font-size: var(--text-md);
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+    .deliverables-card {
+      background: var(--canvas-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-10);
+      box-shadow: var(--shadow-sm);
+    }
+    .deliverable-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-8);
+      margin-top: var(--space-6);
+    }
+    @media (max-width: 600px) {
+      .deliverable-list { grid-template-columns: 1fr; }
+    }
+    .deliv-item h4 {
+      font-family: var(--font-sans);
+      font-size: var(--text-md);
+      font-weight: 600;
+      margin-bottom: var(--space-2);
+      color: var(--ink);
+    }
+    .deliv-item p {
+      font-size: var(--text-sm);
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled" id="main-nav">
+    <a href="/index.html" class="nav__logo" aria-label="PackIt">
+      <img src="assets/images/logo.png" alt="PackIt" class="nav__logo-img" />
+    </a>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="/work.html">Work</a></li>
+      <li><a href="/services.html" style="color:var(--ink); font-weight:700;">Services</a></li>
+      <li><a href="/approach.html">Approach</a></li>
+      <li><a href="/industries.html">Industries</a></li>
+      <li><a href="/about.html">About</a></li>
+    </ul>
+    <a href="/start.html" class="btn btn--primary nav__cta">Start a project</a>
+    <button class="nav__burger" id="nav-burger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="services-hero">
+    <div class="container">
+      <p class="section-label">Capabilities &middot; Surat, Gujarat</p>
+      <h1 class="hero__headline" style="opacity:1; transform:none; text-align:left; margin-bottom:var(--space-6);">
+        Complete business identity.<br/><em>Not just a simple box.</em>
+      </h1>
+      <p class="hero__sub" style="opacity:1; transform:none; margin-left:0; text-align:left;">
+        We partner with local and emerging businesses to architect authentic brand identities, distinct logos, custom packaging dielines, and unboxing craft that command attention.
+      </p>
+    </div>
+  </main>
+
+  <!-- 01 Strategy -->
+  <section class="service-section" id="strategy">
+    <div class="container">
+      <div class="service-row">
+        <div class="service-sticky">
+          <span class="service-num">01 / STRATEGY</span>
+          <h2 class="service-headline">Find the idea.</h2>
+          <p class="service-pitch">Before we design a box, we define why it matters. Great packaging is the distillation of a razor-sharp product truth.</p>
+        </div>
+        <div class="deliverables-card">
+          <h3 style="font-size:var(--text-xl); font-family:var(--font-sans); font-weight:600;">What we deliver</h3>
+          <div class="deliverable-list">
+            <div class="deliv-item">
+              <h4>Competitive Mapping</h4>
+              <p>Analyzing the physical & digital shelf to pinpoint white space and design counter-programming.</p>
+            </div>
+            <div class="deliv-item">
+              <h4>Positioning & Differentiation</h4>
+              <p>Defining the core proposition that gives consumers an immediate reason to pick your product over others.</p>
+            </div>
+            <div class="deliv-item">
+              <h4>Audience & Category Cues</h4>
+              <p>Calibrating aesthetic codes so your product speaks natively to its intended buyers without being generic.</p>
+            </div>
+            <div class="deliv-item">
+              <h4>Product Narrative Architecture</h4>
+              <p>Crafting claims hierarchy, regulatory disclosures, and unboxing storytelling sequence.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 Identity -->
+  <section class="service-section" id="identity">
+    <div class="container">
+      <div class="service-row">
+        <div class="service-sticky">
+          <span class="service-num">02 / IDENTITY</span>
+          <h2 class="service-headline">Make it recognizable.</h2>
+          <p class="service-pitch">A visual system engineered to perform at 3 inches on a supermarket shelf or in a 1-inch thumbnail on Shopify.</p>
+        </div>
+        <div class="deliverables-card">
+          <h3 style="font-size:var(--text-xl); font-family:var(--font-sans); font-weight:600;">What we deliver</h3>
+          <div class="deliverable-list">
+            <div class="deliv-item">
+              <h4>Logomark & Typographic Suite</h4>
+              <p>Distinctive letterforms and icons crafted to emboss, stamp, and scale cleanly across substrates.</p>
+            </div>
+            <div class="deliv-item">
+              <h4>Colour Equity Systems</h4>
+              <p>Proprietary palette engineering ensuring chromatic shelf-blocking and consistent pantone reproduction.</p>
+            </div>
+            <div class="deliv-item">
+              <h4>Packaging Grid Framework</h4>
+              <p>Rules of hierarchy that keep secondary copy legible while preserving dramatic negative space.</p>
+            </div>
+            <div class="deliv-item">
+              <h4>Brand Guidelines</h4>
+              <p>A rigorous, practical design manual for in-house teams, co-packers, and production facilities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 Packaging -->
+  <section class="service-section" id="packaging">
+    <div class="container">
+      <div class="service-row">
+        <div class="service-sticky">
+          <span class="service-num">03 / PACKAGING</span>
+          <h2 class="service-headline">Make it stand out.</h2>
+          <p class="service-pitch">The physical craft of packaging. Custom shapes, tactile finishes, and sustainable structural engineering.</p>
+        </div>
+        <div class="deliverables-card">
+          <h3 style="font-size:var(--text-xl); font-family:var(--font-sans); font-weight:600;">What we deliver</h3>
+          <div class="deliverable-list">
+            <div class="deliv-item">
+              <h4>Structural & Form Design</h4>
+              <p>Custom bottles, pouches, rigid cartons, and fold mechanisms engineered for ergonomics and production.</p>
+            </div>
+            <div class="deliv-item">
+              <h4>Material & Substrate Advisory</h4>
+              <p>Selecting stocks, post-consumer recycled boards, bio-plastics, and foils that reflect quality and values.</p>
+            </div>
+            <div class="deliv-item">
+              <h4>Press-Ready Dielines</h4>
+              <p>Production files pre-flighted with separation plates, varnishes, spot colors, and barcode verification.</p>
+            </div>
+            <div class="deliv-item">
+              <h4>Vendor & Co-packer Liaison</h4>
+              <p>Direct coordination with domestic and global packaging printers to guarantee intent matches reality.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 Experience -->
+  <section class="service-section" id="experience">
+    <div class="container">
+      <div class="service-row">
+        <div class="service-sticky">
+          <span class="service-num">04 / EXPERIENCE</span>
+          <h2 class="service-headline">Make it memorable.</h2>
+          <p class="service-pitch">Every touchpoint after purchase. The sensory thrill of opening, holding, and living with the product.</p>
+        </div>
+        <div class="deliverables-card">
+          <h3 style="font-size:var(--text-xl); font-family:var(--font-sans); font-weight:600;">What we deliver</h3>
+          <div class="deliverable-list">
+            <div class="deliv-item">
+              <h4>Unboxing Choreography</h4>
+              <p>Sequencing every tear-strip, inner liner, and greeting card for maximum delight and organic social sharing.</p>
+            </div>
+            <div class="deliv-item">
+              <h4>Retail Point-of-Sale (POS)</h4>
+              <p>Counter displays, shelf-talkers, end-caps, and shipper displays that command physical retail attention.</p>
+            </div>
+            <div class="deliv-item">
+              <h4>Digital E-Commerce Integration</h4>
+              <p>Photo-grade 3D renders and packshot guidelines optimized for conversion on web and mobile commerce.</p>
+            </div>
+            <div class="deliv-item">
+              <h4>Merchandising & Secondary Goods</h4>
+              <p>Collateral, branded shipping tapes, tissue papers, and product tags that complete the world.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="final-cta">
+    <div class="container" style="text-align:center;">
+      <p class="final-cta__pre">Ready to build your system?</p>
+      <h2 class="final-cta__headline">Let's craft your<br/><em>signature pack.</em></h2>
+      <a href="/start.html" class="btn btn--primary btn--xl">Start a project →</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/index.html" class="nav__logo" aria-label="PackIt">
+            <img src="assets/images/logo.png" alt="PackIt" class="nav__logo-img" />
+          </a>
+          <p class="footer__tagline">Branding &amp; Packaging Studio.<br/>Empowering local &amp; emerging businesses from Surat, Gujarat.</p>
+        </div>
+        <div class="footer__nav">
+          <div class="footer__col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="/services.html#strategy">Brand Strategy</a></li>
+              <li><a href="/services.html#identity">Brand Identity</a></li>
+              <li><a href="/services.html#packaging">Packaging Design</a></li>
+              <li><a href="/services.html#experience">Brand Experience</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Industries</h4>
+            <ul>
+              <li><a href="/industries.html#food">Food &amp; Beverage</a></li>
+              <li><a href="/industries.html#fashion">Fashion &amp; Apparel</a></li>
+              <li><a href="/industries.html#beauty">Beauty &amp; Care</a></li>
+              <li><a href="/industries.html#d2c">D2C &amp; E-commerce</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="/work.html">Work</a></li>
+              <li><a href="/approach.html">Approach</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/start.html">Start a Project</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 PackIt. All rights reserved.</p>
+        <p>Crafted in Surat, Gujarat, India</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

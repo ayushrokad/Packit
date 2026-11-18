@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PackIt — Branding &amp; Packaging Design Studio</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <meta name="description" content="PackIt is an independent branding and packaging studio based in Surat, Gujarat. We empower local and emerging businesses to build their unique brand identity, structural packaging, and retail presence." />
+  <meta name="keywords" content="brand identity Surat, packaging design Surat, branding studio Gujarat, business identity design, D2C packaging India, custom packaging Surat" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/showcase.css" />
+  <link rel="stylesheet" href="css/transformation.css" />
+  <link rel="stylesheet" href="css/cta.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="main-nav">
+    <a href="/" class="nav__logo" aria-label="PackIt">
+      <img src="assets/images/logo.png" alt="PackIt" class="nav__logo-img" />
+    </a>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="/work.html">Work</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/approach.html">Approach</a></li>
+      <li><a href="/industries.html">Industries</a></li>
+      <li><a href="/about.html">About</a></li>
+    </ul>
+    <a href="/start.html" class="btn btn--primary nav__cta" id="nav-cta">Start a project</a>
+    <button class="nav__burger" id="nav-burger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- 01 HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__canvas-wrap">
+      <canvas id="hero-canvas"></canvas>
+    </div>
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <div class="hero__status-badge">
+          <span class="status-pulse"></span>
+          <span>Brand Identity &amp; Packaging Studio</span>
+          <span class="status-sep">/</span>
+          <span class="status-tag">Surat, Gujarat, India</span>
+        </div>
+        <h1 class="hero__headline font-stretch-wide">Your business deserves<br/><em>its own true identity.</em></h1>
+        <p class="hero__sub">We're an emerging creative team in Surat helping local &amp; new businesses build complete brand identities — not just simple packaging. From brand strategy and logo systems to shelf-stopping dielines and unboxing, we make your brand impossible to ignore.</p>
+        <div class="hero__actions">
+          <a href="/start.html" class="btn btn--primary btn--lg" id="hero-cta">Start a project →</a>
+          <a href="#showcase" class="btn btn--ghost btn--lg" id="hero-scroll">Explore the studio ↓</a>
+        </div>
+      </div>
+
+      <!-- Right 3D Pack Stage Floating Camera Switcher (No badges, no tech text, no specs) -->
+      <div class="hero__pack-inspector">
+        <div class="pack-inspector__footer--minimal">
+          <div class="pi-controls">
+            <button class="pi-btn active" id="piBtnFront" title="Front View">Front</button>
+            <button class="pi-btn" id="piBtnAngle" title="Perspective Angle">Angle</button>
+            <button class="pi-btn" id="piBtnBack" title="Back View">Back</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>Scroll to explore</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- CONTINUOUS STUDIO MARQUEE -->
+  <div class="studio-ticker" aria-hidden="true">
+    <div class="studio-ticker__track">
+      <span class="ticker-item"><span class="ticker-star">✦</span> Bespoke Structural Dielines</span>
+      <span class="ticker-item"><span class="ticker-star">✦</span> Artisan Kraft &amp; Rigid Boxes</span>
+      <span class="ticker-item"><span class="ticker-star">✦</span> Hot-Stamped Spot UV</span>
+      <span class="ticker-item"><span class="ticker-star">✦</span> Recyclable Flint Glass</span>
+      <span class="ticker-item"><span class="ticker-star">✦</span> Hermetic Aluminum Canisters</span>
+      <span class="ticker-item"><span class="ticker-star">✦</span> Tactile Unboxing Choreography</span>
+      <span class="ticker-item"><span class="ticker-star">✦</span> Bespoke Structural Dielines</span>
+      <span class="ticker-item"><span class="ticker-star">✦</span> Artisan Kraft &amp; Rigid Boxes</span>
+      <span class="ticker-item"><span class="ticker-star">✦</span> Hot-Stamped Spot UV</span>
+      <span class="ticker-item"><span class="ticker-star">✦</span> Recyclable Flint Glass</span>
+      <span class="ticker-item"><span class="ticker-star">✦</span> Hermetic Aluminum Canisters</span>
+      <span class="ticker-item"><span class="ticker-star">✦</span> Tactile Unboxing Choreography</span>
+    </div>
+  </div>
+
+  <!-- 02 SELECTED PACKAGING FORMATS SHOWCASE -->
+  <section class="showcase" id="showcase">
+    <div class="container">
+      <div class="showcase__intro">
+        <div>
+          <span class="section-label font-stretch-tall">02 — Selected Formats</span>
+          <h2 class="showcase__headline font-stretch-wide">Physical packaging craft.</h2>
+        </div>
+        <p class="showcase__sub">
+          Every product demands its own physical substrate, closure architecture, and tactile finishes. Explore our engineered packaging formats.
+        </p>
+      </div>
+
+      <div class="showcase__grid">
+        <!-- Card 1: Bloom Stand-Up Pouch -->
+        <article class="showcase-card">
+          <div class="showcase-card__visual">
+            <span class="showcase-card__tag">Stand-Up Pouch</span>
+            <span class="showcase-card__finish">Spot UV · FSC Kraft</span>
+            <svg class="showcase-card__illustration" viewBox="0 0 240 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Shadow -->
+              <ellipse cx="120" cy="265" rx="75" ry="12" fill="#000" fill-opacity="0.12"/>
+              <!-- Stand-up Pouch Body -->
+              <path d="M45 45 C45 35 60 30 120 30 C180 30 195 35 195 45 L185 240 C185 250 170 255 120 255 C70 255 55 250 55 240 Z" fill="#EAE5DB" stroke="#1A1A1A" stroke-width="2.5"/>
+              <!-- Heat Seal Crimp Top -->
+              <path d="M45 45 L50 18 C50 15 65 12 120 12 C175 12 190 15 190 18 L195 45 Z" fill="#DDD7CB" stroke="#1A1A1A" stroke-width="2"/>
+              <line x1="50" y1="28" x2="190" y2="28" stroke="#BCB4A4" stroke-width="1.5" stroke-dasharray="3 2"/>
+              <!-- Obsidian Top Header -->
+              <path d="M47 45 C47 45 70 42 120 42 C170 42 193 45 193 45 L190 115 C190 115 160 122 120 122 C80 122 50 115 50 115 Z" fill="#1A1A1A"/>
+              <!-- Bloom Wordmark -->
+              <text x="120" y="82" text-anchor="middle" fill="#F5C842" font-size="28" font-family="Instrument Serif" font-style="italic">Bloom</text>
+              <text x="120" y="100" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-family="Inter" letter-spacing="3">ORGANIC CRUNCH</text>
+              <!-- Center Golden Seal -->
+              <circle cx="120" cy="165" r="24" fill="#FAF8F2" stroke="#1A1A1A" stroke-width="1.8"/>
+              <circle cx="120" cy="165" r="20" fill="#F5C842"/>
+              <polygon points="120,154 123,163 132,165 123,167 120,176 117,167 108,165 117,163" fill="#1A1A1A"/>
+              <!-- Flavor descriptor -->
+              <text x="120" y="210" text-anchor="middle" fill="#1A1A1A" font-size="10" font-family="Space Grotesk" font-weight="700">HEIRLOOM QUINOA</text>
+              <text x="120" y="224" text-anchor="middle" fill="#777" font-size="8" font-family="Inter">SEA SALT &amp; CACAO · 250G</text>
+              <!-- Bottom Gusset Curve -->
+              <path d="M60 236 C80 246 160 246 180 236" stroke="#C8C0B0" stroke-width="1.5" fill="none"/>
+            </svg>
+          </div>
+          <div class="showcase-card__body">
+            <h3 class="showcase-card__title font-stretch-wide">Bloom Stand-Up Pouch</h3>
+            <div class="showcase-card__meta">
+              <span class="showcase-pill">80gsm Raw Kraft</span>
+              <span class="showcase-pill">EVOH Bio-Barrier</span>
+              <span class="showcase-pill">Spot Gloss UV</span>
+            </div>
+            <p class="showcase-card__desc">Airtight resealable zipper pouch with calibrated matte substrate and high-contrast typographic hierarchy.</p>
+          </div>
+        </article>
+
+        <!-- Card 2: ORO Reserve Bottle -->
+        <article class="showcase-card">
+          <div class="showcase-card__visual">
+            <span class="showcase-card__tag">Apothecary Glass</span>
+            <span class="showcase-card__finish">Hot Foil · Amber Glass</span>
+            <svg class="showcase-card__illustration" viewBox="0 0 240 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Shadow -->
+              <ellipse cx="120" cy="265" rx="55" ry="10" fill="#000" fill-opacity="0.12"/>
+              <!-- Amber Glass Body -->
+              <rect x="75" y="90" width="90" height="165" rx="14" fill="#B87333" fill-opacity="0.9" stroke="#1A1A1A" stroke-width="2.5"/>
+              <rect x="78" y="93" width="84" height="159" rx="12" fill="url(#amberGrad)"/>
+              <!-- Glass Highlights -->
+              <line x1="86" y1="100" x2="86" y2="245" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="3" stroke-linecap="round"/>
+              <line x1="92" y1="100" x2="92" y2="245" stroke="#FFFFFF" stroke-opacity="0.15" stroke-width="1.5"/>
+              <!-- Neck & Wooden Stopper -->
+              <rect x="100" y="55" width="40" height="38" rx="4" fill="#A0522D" stroke="#1A1A1A" stroke-width="2"/>
+              <rect x="95" y="32" width="50" height="25" rx="6" fill="#1A1A1A"/>
+              <rect x="97" y="34" width="46" height="6" fill="#F5C842"/>
+              <!-- Cotton Paper Label -->
+              <rect x="85" y="115" width="70" height="110" rx="4" fill="#FAF8F2" stroke="#1A1A1A" stroke-width="1.5"/>
+              <rect x="88" y="118" width="64" height="104" rx="2" fill="none" stroke="#F5C842" stroke-width="1"/>
+              <text x="120" y="145" text-anchor="middle" fill="#1A1A1A" font-size="16" font-family="Space Grotesk" font-weight="700" letter-spacing="3">ORO</text>
+              <line x1="100" y1="152" x2="140" y2="152" stroke="#F5C842" stroke-width="1.5"/>
+              <text x="120" y="166" text-anchor="middle" fill="#777" font-size="6.5" font-family="Inter" letter-spacing="1.5">COLD BREW RESERVE</text>
+              <circle cx="120" cy="186" r="10" fill="#F5C842" stroke="#1A1A1A" stroke-width="1"/>
+              <polygon points="120,179 122,185 128,186 122,187 120,193 118,187 112,186 118,185" fill="#1A1A1A"/>
+              <text x="120" y="210" text-anchor="middle" fill="#1A1A1A" font-size="7" font-family="Space Grotesk">330ML · SINGLE ORIGIN</text>
+              <defs>
+                <linearGradient id="amberGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#5A2E0E"/>
+                  <stop offset="50%" stop-color="#8C4312"/>
+                  <stop offset="100%" stop-color="#3D1A06"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="showcase-card__body">
+            <h3 class="showcase-card__title font-stretch-wide">ORO Cold Brew Glass</h3>
+            <div class="showcase-card__meta">
+              <span class="showcase-pill">100% Recycled Flint</span>
+              <span class="showcase-pill">Cotton Stock Label</span>
+              <span class="showcase-pill">Gold Foil Stamp</span>
+            </div>
+            <p class="showcase-card__desc">Heavyweight apothecary bottle with tactile uncoated paper label and embossed gold foil seals.</p>
+          </div>
+        </article>
+
+        <!-- Card 3: Velour Rigid Slide Box -->
+        <article class="showcase-card">
+          <div class="showcase-card__visual">
+            <span class="showcase-card__tag">Rigid Slide Box</span>
+            <span class="showcase-card__finish">Blind Deboss · Unboxing</span>
+            <svg class="showcase-card__illustration" viewBox="0 0 240 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Shadow -->
+              <ellipse cx="120" cy="260" rx="70" ry="12" fill="#000" fill-opacity="0.14"/>
+              <!-- Outer Sleeve (Obsidian) -->
+              <rect x="50" y="60" width="140" height="190" rx="8" fill="#1A1A1A" stroke="#333" stroke-width="2"/>
+              <!-- Inner Tray Partially Slid Out Upwards -->
+              <rect x="58" y="25" width="124" height="160" rx="6" fill="#F2EFE8" stroke="#1A1A1A" stroke-width="1.8"/>
+              <!-- Amber Dropper Vial Inside Tray -->
+              <rect x="95" y="55" width="50" height="95" rx="8" fill="#C88532" stroke="#1A1A1A" stroke-width="1.8"/>
+              <rect x="107" y="32" width="26" height="25" rx="3" fill="#1A1A1A"/>
+              <rect x="113" y="20" width="14" height="14" rx="7" fill="#F5C842"/>
+              <!-- Label on Vial -->
+              <rect x="101" y="75" width="38" height="50" rx="2" fill="#FAF8F2"/>
+              <text x="120" y="96" text-anchor="middle" fill="#1A1A1A" font-size="8" font-family="Instrument Serif" font-style="italic">Velour</text>
+              <text x="120" y="108" text-anchor="middle" fill="#777" font-size="5" font-family="Inter">BOTANICAL</text>
+              <!-- Outer Sleeve Blind Deboss Monogram -->
+              <rect x="68" y="170" width="104" height="60" rx="4" fill="#222" stroke="#2C2C2C" stroke-width="1"/>
+              <circle cx="120" cy="200" r="18" stroke="#383838" stroke-width="1.5" fill="none"/>
+              <polygon points="120,188 123,197 131,200 123,203 120,212 117,203 109,200 117,197" fill="#F5C842"/>
+              <!-- Pull Ribbon -->
+              <path d="M120 25 L120 10 C120 6 126 6 126 10 L126 25" stroke="#F5C842" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="showcase-card__body">
+            <h3 class="showcase-card__title font-stretch-wide">Velour Rigid Slide Box</h3>
+            <div class="showcase-card__meta">
+              <span class="showcase-pill">1200gsm Grayboard</span>
+              <span class="showcase-pill">Dyed Obsidian Paper</span>
+              <span class="showcase-pill">Pull Ribbon</span>
+            </div>
+            <p class="showcase-card__desc">Two-piece telescoping rigid box engineered for a frictionless, luxurious tactile reveal sequence.</p>
+          </div>
+        </article>
+
+        <!-- Card 4: Kanso Aluminum Tin -->
+        <article class="showcase-card">
+          <div class="showcase-card__visual">
+            <span class="showcase-card__tag">Brushed Metal Tin</span>
+            <span class="showcase-card__finish">Laser Etch · Airtight</span>
+            <svg class="showcase-card__illustration" viewBox="0 0 240 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Shadow -->
+              <ellipse cx="120" cy="260" rx="65" ry="11" fill="#000" fill-opacity="0.12"/>
+              <!-- Tin Body -->
+              <rect x="65" y="85" width="110" height="165" rx="16" fill="url(#metalGrad)" stroke="#1A1A1A" stroke-width="2.2"/>
+              <!-- Brushed Metal Sheen Lines -->
+              <line x1="85" y1="88" x2="85" y2="246" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="4"/>
+              <line x1="155" y1="88" x2="155" y2="246" stroke="#000000" stroke-opacity="0.15" stroke-width="3"/>
+              <!-- Seamless Lid -->
+              <rect x="62" y="55" width="116" height="38" rx="8" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="2"/>
+              <rect x="64" y="57" width="112" height="6" fill="#F5C842"/>
+              <!-- Washi Tamper Seal Band -->
+              <rect x="110" y="45" width="20" height="58" fill="#FAF8F2" stroke="#1A1A1A" stroke-width="1.2"/>
+              <text x="120" y="80" text-anchor="middle" fill="#1A1A1A" font-size="8" font-family="Space Grotesk" font-weight="700" transform="rotate(-90 120 80)">KANSO</text>
+              <!-- Laser Etched Center Geometry -->
+              <circle cx="120" cy="165" r="28" stroke="#333" stroke-width="1.5" stroke-dasharray="3 3" fill="none"/>
+              <text x="120" y="162" text-anchor="middle" fill="#1A1A1A" font-size="14" font-family="Space Grotesk" font-weight="700">簡素</text>
+              <text x="120" y="178" text-anchor="middle" fill="#444" font-size="7.5" font-family="Inter" letter-spacing="2">CEREMONIAL</text>
+              <text x="120" y="215" text-anchor="middle" fill="#555" font-size="7" font-family="Space Grotesk">100g · UJI KYOTO</text>
+              <defs>
+                <linearGradient id="metalGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#C2C7CC"/>
+                  <stop offset="25%" stop-color="#E2E6EA"/>
+                  <stop offset="70%" stop-color="#B8BEC4"/>
+                  <stop offset="100%" stop-color="#9BA1A8"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="showcase-card__body">
+            <h3 class="showcase-card__title font-stretch-wide">Kanso Aluminum Tin</h3>
+            <div class="showcase-card__meta">
+              <span class="showcase-pill">Food-Grade Brushed Metal</span>
+              <span class="showcase-pill">Airtight Inner Cap</span>
+              <span class="showcase-pill">Laser Etch</span>
+            </div>
+            <p class="showcase-card__desc">Hermetic seamless metal canister with precision double-wall seal to preserve delicate botanicals.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 THE TRANSFORMATION (Streamlined Visual Evolution) -->
+  <section class="transformation" id="transformation">
+    <div class="transformation__header">
+      <div>
+        <span class="section-label font-stretch-tall">03 — The Transformation</span>
+        <h2 class="font-stretch-wide">From raw substrate<br/>to shelf standout.</h2>
+      </div>
+      <div class="transformation__controls">
+        <span id="tsStepIndicator" style="font-weight:700; color:var(--yellow); margin-right:4px;">PHASE 01 / 05</span>
+        <button class="ts-ctrl-btn" id="tsAutoPlayBtn">⏸ Pause</button>
+        <button class="ts-ctrl-btn" id="tsPrevBtn">← Prev</button>
+        <button class="ts-ctrl-btn" id="tsNextBtn">Next →</button>
+      </div>
+    </div>
+
+    <div class="transformation__stage-wrap">
+      <div class="transformation__product-stage">
+        <div class="transformation__product" id="transform-product">
+          <!-- 01 Raw Substrate -->
+          <div class="tp-layer tp-plain" id="tp-plain">
+            <svg viewBox="0 0 220 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="25" y="15" width="170" height="310" rx="14" fill="#EAE5DB" stroke="#BCB4A4" stroke-width="1.8"/>
+              <rect x="25" y="15" width="170" height="42" rx="14" fill="#DDD7CB"/>
+              <line x1="25" y1="57" x2="195" y2="57" stroke="#BCB4A4" stroke-width="1.2"/>
+              <polygon points="25,48 35,44 25,40" fill="#999"/>
+              <polygon points="195,48 185,44 195,40" fill="#999"/>
+              <rect x="45" y="120" width="130" height="70" rx="4" stroke="#BCB4A4" stroke-dasharray="3 3" fill="none"/>
+              <text x="110" y="145" text-anchor="middle" fill="#888" font-size="8" font-family="Space Grotesk">SUBSTRATE // RAW</text>
+              <text x="110" y="160" text-anchor="middle" fill="#555" font-size="10" font-family="Space Grotesk" font-weight="700">3-PLY BIO-BARRIER</text>
+              <text x="110" y="174" text-anchor="middle" fill="#888" font-size="7" font-family="Inter">OXYGEN &amp; MOISTURE TESTED</text>
+              <line x1="30" y1="280" x2="190" y2="280" stroke="#BCB4A4" stroke-width="0.8"/>
+              <text x="110" y="295" text-anchor="middle" fill="#999" font-size="7" font-family="Space Grotesk">DIELINE WIDTH: 170mm</text>
+            </svg>
+          </div>
+
+          <!-- 02 Strategic Territory -->
+          <div class="tp-layer tp-positioned" id="tp-positioned">
+            <svg viewBox="0 0 220 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="25" y="15" width="170" height="310" rx="14" fill="#F0ECE4" stroke="#BCB4A4" stroke-width="1.8"/>
+              <rect x="25" y="15" width="170" height="90" rx="14" fill="#1A1A1A"/>
+              <rect x="25" y="80" width="170" height="25" fill="#1A1A1A"/>
+              <text x="110" y="52" text-anchor="middle" fill="#F5C842" font-size="11" font-family="Space Grotesk" font-weight="700" letter-spacing="3">TERRITORY // 02</text>
+              <text x="110" y="72" text-anchor="middle" fill="#FFFFFF" font-size="9" font-family="Inter" font-weight="600" letter-spacing="1">MINDFUL LUXURY</text>
+              <line x1="60" y1="84" x2="160" y2="84" stroke="#F5C842" stroke-width="1"/>
+              <circle cx="110" cy="190" r="44" stroke="#D8D2C4" stroke-width="1.2" stroke-dasharray="2 2" fill="none"/>
+              <circle cx="110" cy="190" r="24" stroke="#1A1A1A" stroke-width="1.5" fill="none"/>
+              <polygon points="110,174 114,190 110,194 106,190" fill="#F5C842"/>
+              <polygon points="110,206 114,190 110,186 106,190" fill="#1A1A1A"/>
+              <text x="110" y="250" text-anchor="middle" fill="#1A1A1A" font-size="8.5" font-family="Space Grotesk" font-weight="700">WHITE SPACE: SUPER-PREMIUM</text>
+            </svg>
+          </div>
+
+          <!-- 03 Brand Identity -->
+          <div class="tp-layer tp-identity" id="tp-identity">
+            <svg viewBox="0 0 220 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="25" y="15" width="170" height="310" rx="14" fill="#FAF8F2" stroke="#1A1A1A" stroke-width="1.8"/>
+              <rect x="25" y="15" width="170" height="96" rx="14" fill="#1A1A1A"/>
+              <rect x="25" y="80" width="170" height="31" fill="#1A1A1A"/>
+              <text x="110" y="55" text-anchor="middle" fill="#F5C842" font-size="24" font-family="Instrument Serif" font-style="italic">Bloom</text>
+              <text x="110" y="74" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-family="Inter" letter-spacing="3" opacity="0.9">ORGANIC SNACKS</text>
+              <line x1="60" y1="84" x2="160" y2="84" stroke="#F5C842" stroke-width="0.8" opacity="0.6"/>
+              <text x="110" y="97" text-anchor="middle" fill="#F5C842" font-size="6.5" font-family="Space Grotesk" letter-spacing="1.5">SMALL BATCH · ARTISANAL</text>
+              <circle cx="110" cy="195" r="46" fill="none" stroke="#E6E0D4" stroke-width="1.2"/>
+              <circle cx="110" cy="195" r="22" fill="#F5C842" stroke="#1A1A1A" stroke-width="1.5"/>
+              <polygon points="110,185 113,193 121,195 113,197 110,205 107,197 99,195 107,193" fill="#1A1A1A"/>
+              <text x="110" y="260" text-anchor="middle" fill="#1A1A1A" font-size="8.5" font-family="Space Grotesk" font-weight="700">PANTONE SPOT 109C</text>
+            </svg>
+          </div>
+
+          <!-- 04 Packaging Finish -->
+          <div class="tp-layer tp-packaged" id="tp-packaged">
+            <svg viewBox="0 0 220 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="20" y="10" width="180" height="320" rx="14" fill="#FAF8F2" stroke="#1A1A1A" stroke-width="2"/>
+              <rect x="20" y="10" width="180" height="100" rx="14" fill="#1A1A1A"/>
+              <rect x="20" y="80" width="180" height="30" fill="#1A1A1A"/>
+              <text x="110" y="52" text-anchor="middle" fill="#F5C842" font-size="28" font-family="Instrument Serif" font-style="italic">Bloom</text>
+              <text x="110" y="73" text-anchor="middle" fill="#FFFFFF" font-size="8" font-family="Inter" letter-spacing="3.5" opacity="0.95">ORGANIC SNACKS</text>
+              <text x="110" y="94" text-anchor="middle" fill="#F5C842" font-size="7" font-family="Space Grotesk" letter-spacing="2">EST. 2024 · HEIRLOOM GRAINS</text>
+              <rect x="42" y="125" width="136" height="120" rx="8" fill="#F2EFE8" stroke="#E2DCD0" stroke-width="1"/>
+              <text x="110" y="152" text-anchor="middle" fill="#1A1A1A" font-size="9" font-family="Inter" font-weight="600" letter-spacing="1">NET WT</text>
+              <text x="110" y="180" text-anchor="middle" fill="#1A1A1A" font-size="24" font-family="Space Grotesk" font-weight="700">250g</text>
+              <text x="110" y="198" text-anchor="middle" fill="#777" font-size="8" font-family="Inter">8.8 OZ · PLANT BASED</text>
+              <rect x="42" y="260" width="136" height="28" rx="6" fill="#F5C842" stroke="#1A1A1A" stroke-width="1.2"/>
+              <text x="110" y="278" text-anchor="middle" fill="#1A1A1A" font-size="9" font-family="Space Grotesk" font-weight="700" letter-spacing="1.5">RESEALABLE ZIPPER</text>
+            </svg>
+          </div>
+
+          <!-- 05 Retail Presence -->
+          <div class="tp-layer tp-experience" id="tp-experience">
+            <svg viewBox="0 0 220 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="110" cy="140" r="100" fill="#F5C842" fill-opacity="0.12"/>
+              <rect x="45" y="25" width="130" height="230" rx="12" fill="#FAF8F2" stroke="#1A1A1A" stroke-width="2"/>
+              <rect x="45" y="25" width="130" height="74" rx="12" fill="#1A1A1A"/>
+              <rect x="45" y="75" width="130" height="24" fill="#1A1A1A"/>
+              <text x="110" y="55" text-anchor="middle" fill="#F5C842" font-size="20" font-family="Instrument Serif" font-style="italic">Bloom</text>
+              <text x="110" y="70" text-anchor="middle" fill="#FFF" font-size="6.5" font-family="Inter" letter-spacing="3">ORGANIC SNACKS</text>
+              <rect x="6" y="130" width="34" height="125" rx="6" fill="#DCD6C8" stroke="#BCB4A4" stroke-width="1"/>
+              <rect x="180" y="125" width="34" height="130" rx="6" fill="#DCD6C8" stroke="#BCB4A4" stroke-width="1"/>
+              <rect x="0" y="255" width="220" height="10" rx="2" fill="#A89E8C"/>
+              <rect x="0" y="265" width="220" height="20" fill="#8C8270"/>
+              <polygon points="190,40 193,48 201,51 193,54 190,62 187,54 179,51 187,48" fill="#F5C842"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="transformation__timeline">
+        <div class="transformation__steps">
+          <button class="ts-step active" data-step="plain" id="ts-product">
+            <span class="ts-step__num">01</span>
+            <div class="ts-step__info">
+              <h4 class="font-stretch-wide">The Foundation</h4>
+              <p>Finding the perfect material to protect your product and feel right in the hand.</p>
+            </div>
+          </button>
+          <button class="ts-step" data-step="positioned" id="ts-position">
+            <span class="ts-step__num">02</span>
+            <div class="ts-step__info">
+              <h4 class="font-stretch-wide">The Hook</h4>
+              <p>Creating a bold visual anchor so your product is instantly recognized.</p>
+            </div>
+          </button>
+          <button class="ts-step" data-step="identity" id="ts-identity">
+            <span class="ts-step__num">03</span>
+            <div class="ts-step__info">
+              <h4 class="font-stretch-wide">The Personality</h4>
+              <p>Crafting a unique logo and identity that tells your brand's story at a glance.</p>
+            </div>
+          </button>
+          <button class="ts-step" data-step="packaged" id="ts-packaging">
+            <span class="ts-step__num">04</span>
+            <div class="ts-step__info">
+              <h4 class="font-stretch-wide">The Premium Touch</h4>
+              <p>Adding special finishes so the packaging feels expensive and high-quality.</p>
+            </div>
+          </button>
+          <button class="ts-step" data-step="experience" id="ts-experience">
+            <span class="ts-step__num">05</span>
+            <div class="ts-step__info">
+              <h4 class="font-stretch-wide">The Final Test</h4>
+              <p>Ensuring the design looks perfect on the shelf and wows when unboxed.</p>
+            </div>
+          </button>
+        </div>
+        <div class="transformation__progress">
+          <div class="transformation__progress-bar" id="transform-progress"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Spec Sheet Strip -->
+    <div class="transformation__spec-strip">
+      <div class="ts-spec-card">
+        <div class="ts-spec-col">
+          <span>Substrate &amp; Barrier</span>
+          <span id="specSubstrate">80gsm Raw Kraft + 3-Ply EVOH Bio-Barrier</span>
+        </div>
+        <div class="ts-spec-col">
+          <span>Chromatic Standards</span>
+          <span id="specColor">Pantone Black 6C + Pantone 109C Solar Yellow</span>
+        </div>
+        <div class="ts-spec-col">
+          <span>Typography Suite</span>
+          <span id="specType">Instrument Serif + Space Grotesk</span>
+        </div>
+        <div class="ts-spec-col">
+          <span>Calibration</span>
+          <span id="specImpact">1:1 CAD Dieline · 300 DPI Pre-Flight Approved</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 STUDIO DISCIPLINES (Visual-Led Pillars) -->
+  <section class="disciplines" id="disciplines">
+    <div class="container">
+      <div class="disciplines__intro">
+        <div>
+          <span class="section-label font-stretch-tall">04 — Disciplines</span>
+          <h2 class="disciplines__headline font-stretch-wide">What we build.</h2>
+        </div>
+        <p class="showcase__sub">
+          We go far beyond standard packaging suppliers. We architect your complete brand identity so your business commands real authority on shelves and screens.
+        </p>
+      </div>
+
+      <div class="disciplines__grid">
+        <!-- 01 Structural CAD Engineering -->
+        <article class="discipline-card">
+          <span class="discipline-card__num font-stretch-tall">01</span>
+          <svg class="discipline-card__icon" viewBox="0 0 60 60" fill="none">
+            <rect x="6" y="10" width="48" height="40" rx="3" stroke="#1A1A1A" stroke-width="2"/>
+            <line x1="22" y1="10" x2="22" y2="50" stroke="#F5C842" stroke-width="2" stroke-dasharray="3 2"/>
+            <line x1="38" y1="10" x2="38" y2="50" stroke="#F5C842" stroke-width="2" stroke-dasharray="3 2"/>
+            <circle cx="30" cy="30" r="8" fill="#F5C842" fill-opacity="0.3" stroke="#1A1A1A" stroke-width="1.8"/>
+            <path d="M6 22 L2 26 V34 L6 38" stroke="#1A1A1A" stroke-width="1.8"/>
+          </svg>
+          <h3 class="discipline-card__title font-stretch-wide">Structural CAD &amp; Dielines</h3>
+          <p class="discipline-card__desc">Custom folding carton geometries, pouch blueprints, and 1:1 calibrated vector cut &amp; crease dielines.</p>
+          <span class="discipline-card__tag">Industrial Engineering</span>
+        </article>
+
+        <!-- 02 Brand Identity & Letterforms -->
+        <article class="discipline-card">
+          <span class="discipline-card__num font-stretch-tall">02</span>
+          <svg class="discipline-card__icon" viewBox="0 0 60 60" fill="none">
+            <rect x="8" y="12" width="44" height="36" rx="4" stroke="#1A1A1A" stroke-width="2"/>
+            <text x="30" y="37" text-anchor="middle" fill="#1A1A1A" font-size="22" font-family="Instrument Serif" font-style="italic">Aa</text>
+            <circle cx="44" cy="40" r="10" fill="#F5C842" stroke="#1A1A1A" stroke-width="1.8"/>
+            <polygon points="44,34 46,39 51,40 46,41 44,46 42,41 37,40 42,39" fill="#1A1A1A"/>
+          </svg>
+          <h3 class="discipline-card__title font-stretch-wide">Identity &amp; Typography</h3>
+          <p class="discipline-card__desc">Bespoke drawn wordmarks, font pairings, spot Pantone ink systems, and proprietary brand marks.</p>
+          <span class="discipline-card__tag">Visual Systems</span>
+        </article>
+
+        <!-- 03 Sustainable Substrates -->
+        <article class="discipline-card">
+          <span class="discipline-card__num font-stretch-tall">03</span>
+          <svg class="discipline-card__icon" viewBox="0 0 60 60" fill="none">
+            <polygon points="30,8 52,20 52,44 30,54 8,44 8,20" fill="none" stroke="#1A1A1A" stroke-width="2"/>
+            <polygon points="30,16 44,24 44,40 30,46 16,40 16,24" fill="#F5C842" fill-opacity="0.3" stroke="#1A1A1A" stroke-width="1.5"/>
+            <circle cx="30" cy="31" r="5" fill="#F5C842" stroke="#1A1A1A" stroke-width="1.5"/>
+          </svg>
+          <h3 class="discipline-card__title font-stretch-wide">Sustainable Materials</h3>
+          <p class="discipline-card__desc">FSC-certified boards, compostable barrier films, recyclable flint glass, and water-based soy inks.</p>
+          <span class="discipline-card__tag">Eco-Substrates</span>
+        </article>
+
+        <!-- 04 Retail & Unboxing -->
+        <article class="discipline-card">
+          <span class="discipline-card__num font-stretch-tall">04</span>
+          <svg class="discipline-card__icon" viewBox="0 0 60 60" fill="none">
+            <rect x="10" y="20" width="40" height="28" rx="3" stroke="#1A1A1A" stroke-width="2"/>
+            <path d="M10 20 L24 8 L38 20" fill="#F5C842" stroke="#1A1A1A" stroke-width="1.8"/>
+            <path d="M26 20 L38 8 L50 20" fill="#F5C842" stroke="#1A1A1A" stroke-width="1.8"/>
+            <circle cx="30" cy="34" r="5" fill="#1A1A1A"/>
+          </svg>
+          <h3 class="discipline-card__title font-stretch-wide">Retail &amp; Unboxing</h3>
+          <p class="discipline-card__desc">Display-ready shelf trays, branded shipper tape, custom tissue, and tactile seal choreography.</p>
+          <span class="discipline-card__tag">Customer Experience</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 STUDIO CREED / TYPOGRAPHIC BANNER -->
+  <section class="studio-statement" aria-label="Studio Creed">
+    <div class="studio-statement__inner">
+      <span class="studio-statement__label font-stretch-tall">STUDIO MISSION</span>
+      <h2 class="studio-statement__headline font-stretch-ultra-wide">
+        Packaging without identity is just <em>a cardboard box.</em>
+      </h2>
+      <p class="studio-statement__sub">
+        We help ambitious local and emerging businesses build an unmistakable brand identity that turns first-time shoppers into lifelong loyalists.
+      </p>
+    </div>
+  </section>
+
+  <!-- 06 FINAL CTA -->
+  <section class="final-cta" id="final-cta">
+    <div class="container">
+      <div class="final-cta__inner">
+        <p class="final-cta__pre font-stretch-tall">READY TO BUILD SOMETHING EXCEPTIONAL?</p>
+        <h2 class="final-cta__headline font-stretch-wide">Let's make it<br/><em>harder to overlook.</em></h2>
+        <a href="/start.html" class="btn btn--primary btn--xl" id="final-cta-btn">Start a project →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/" class="nav__logo" aria-label="PackIt">
+            <img src="assets/images/logo.png" alt="PackIt" class="nav__logo-img" />
+          </a>
+          <p class="footer__tagline">Branding &amp; Packaging Studio.<br/>Empowering local &amp; emerging businesses from Surat, Gujarat.</p>
+        </div>
+        <div class="footer__nav">
+          <div class="footer__col">
+            <h4 class="font-stretch-wide">Services</h4>
+            <ul>
+              <li><a href="/services.html#strategy">Brand Strategy</a></li>
+              <li><a href="/services.html#identity">Brand Identity</a></li>
+              <li><a href="/services.html#packaging">Packaging Design</a></li>
+              <li><a href="/services.html#experience">Brand Experience</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4 class="font-stretch-wide">Industries</h4>
+            <ul>
+              <li><a href="/industries.html#food">Food &amp; Beverage</a></li>
+              <li><a href="/industries.html#fashion">Fashion &amp; Apparel</a></li>
+              <li><a href="/industries.html#beauty">Beauty &amp; Care</a></li>
+              <li><a href="/industries.html#d2c">D2C &amp; E-commerce</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4 class="font-stretch-wide">Company</h4>
+            <ul>
+              <li><a href="/work.html">Work</a></li>
+              <li><a href="/approach.html">Approach</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/start.html">Start a Project</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 PackIt. All rights reserved.</p>
+        <p>Crafted in Surat, Gujarat, India</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/three.min.js"></script>
+  <script src="js/hero-3d.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

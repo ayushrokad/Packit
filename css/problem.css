@@ -1,0 +1,753 @@
+/* ===========================
+   PROBLEM SECTION — PackIt (Enriched Real-World Data & Structured Layout)
+   =========================== */
+
+.problem {
+  padding: var(--space-40) 0;
+  background: var(--canvas);
+  position: relative;
+  overflow: hidden;
+}
+
+.problem__intro {
+  margin-bottom: var(--space-16);
+}
+
+.problem__headline {
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+  color: var(--ink);
+  max-width: 600px;
+}
+
+/* ——— Cards grid ——— */
+.problem__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  margin-bottom: var(--space-20);
+}
+
+.problem__card {
+  background: var(--canvas-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: transform var(--duration-med) var(--ease-out),
+              box-shadow var(--duration-med) var(--ease-out),
+              border-color var(--duration-med);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.problem__card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--yellow);
+}
+
+/* ——— Visual Stage Area ——— */
+.problem__visual {
+  height: 290px;
+  background: var(--canvas-off);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ——— 01 REALISTIC SUPERMARKET SHELF SCENE ——— */
+.shelf-scene {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 34px;
+  gap: 8px;
+  background: radial-gradient(circle at 50% 30%, #FAF8F4 0%, #EAE5DB 100%);
+}
+
+/* Shelf wood/metal rail */
+.shelf-rail {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 34px;
+  background: linear-gradient(to bottom, #D2CCC0, #B8B0A2);
+  border-top: 2px solid #8E8676;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 16px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.shelf-tag {
+  background: #FFF;
+  border: 1px solid #AAA;
+  border-radius: 2px;
+  padding: 1px 4px;
+  font-family: var(--font-sans);
+  font-size: 8px;
+  font-weight: 700;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.shelf-tag span {
+  font-size: 6px;
+  color: #888;
+}
+
+/* Generic Competitor Boxes */
+.competitor-box {
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  transition: all 0.45s var(--ease-out);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 6px 4px;
+  text-align: center;
+}
+
+.c-box-1 {
+  width: 44px;
+  height: 140px;
+  background: #D8CEBE;
+  border: 1px solid #C4BAAA;
+}
+
+.c-box-2 {
+  width: 48px;
+  height: 155px;
+  background: #C8D2D0;
+  border: 1px solid #B4C0BE;
+}
+
+.c-box-3 {
+  width: 42px;
+  height: 135px;
+  background: #DEC8B8;
+  border: 1px solid #CCA898;
+}
+
+.c-box-4 {
+  width: 46px;
+  height: 148px;
+  background: #D0C8D6;
+  border: 1px solid #BEB4C4;
+}
+
+.c-box-label {
+  font-family: var(--font-body);
+  font-size: 6px;
+  text-transform: uppercase;
+  color: #777;
+  letter-spacing: 0.5px;
+}
+
+.c-box-mock {
+  width: 70%;
+  height: 18px;
+  background: rgba(0,0,0,0.06);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* PackIt Hero Stand-up Pouch in Shelf */
+.bloom-shelf-pack {
+  width: 58px;
+  height: 168px;
+  background: #FAF8F2;
+  border: 1.5px solid #1A1A1A;
+  border-radius: 8px 8px 3px 3px;
+  position: relative;
+  transition: all 0.5s var(--ease-spring);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.bloom-pack-top {
+  height: 48px;
+  background: #1A1A1A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+}
+
+.bloom-pack-top h5 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 14px;
+  color: #F5C842;
+  line-height: 1;
+}
+
+.bloom-pack-top span {
+  font-family: var(--font-sans);
+  font-size: 5px;
+  letter-spacing: 1.5px;
+  color: #FFF;
+  opacity: 0.9;
+}
+
+.bloom-pack-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  gap: 4px;
+}
+
+.bloom-pack-seal {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #F5C842;
+  border: 1px solid #1A1A1A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+
+.bloom-pack-sub {
+  font-family: var(--font-sans);
+  font-size: 5.5px;
+  font-weight: 700;
+  color: #1A1A1A;
+  letter-spacing: 0.5px;
+}
+
+/* Shelf Pop Trigger on Hover / Active */
+.shelf-pop-badge {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background: var(--yellow);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 8px 20px rgba(245, 200, 66, 0.45);
+  opacity: 0;
+  transition: all 0.4s var(--ease-spring);
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.problem__card:hover .shelf-pop-badge,
+.problem__card.active-fix .shelf-pop-badge {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.problem__card:hover .competitor-box,
+.problem__card.active-fix .competitor-box {
+  opacity: 0.22;
+  filter: blur(0.5px);
+  transform: scaleY(0.92);
+}
+
+.problem__card:hover .bloom-shelf-pack,
+.problem__card.active-fix .bloom-shelf-pack {
+  transform: scale(1.18) translateY(-14px);
+  box-shadow: 0 24px 36px rgba(245, 200, 66, 0.35), 0 12px 24px rgba(26,26,26,0.2);
+  border-color: #1A1A1A;
+}
+
+/* ——— 02 CLUTTER VS CLEAN HIERARCHY SCENE ——— */
+.clutter-scene {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+}
+
+.clutter-pack {
+  width: 170px;
+  height: 230px;
+  background: var(--canvas-card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all 0.5s var(--ease-spring);
+}
+
+/* Chaotic Badges Layer */
+.clutter-messy-layer {
+  position: absolute;
+  inset: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: all 0.4s var(--ease-out);
+}
+
+.messy-row {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.messy-tag {
+  background: #E8E2D2;
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  font-size: 6.5px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  color: #555;
+  padding: 2px 5px;
+}
+
+.messy-tag.star {
+  background: #FF5F56;
+  color: #FFF;
+  border: none;
+  font-size: 7px;
+}
+
+.messy-lines {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.messy-line {
+  height: 4px;
+  background: #E0DDD4;
+  border-radius: 2px;
+}
+
+.messy-burst {
+  position: absolute;
+  bottom: 12px;
+  right: 10px;
+  background: #FFBD2E;
+  color: #000;
+  font-size: 7px;
+  font-weight: 800;
+  padding: 3px 6px;
+  border-radius: 3px;
+  transform: rotate(-6deg);
+}
+
+/* Clean PackIt Hierarchy Layer */
+.clutter-clean-layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 14px;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.92);
+  transition: all 0.45s var(--ease-spring);
+  background: #FAF8F2;
+}
+
+.clean-tier-1 {
+  font-family: var(--font-sans);
+  font-size: 7.5px;
+  letter-spacing: 2px;
+  color: var(--yellow-dark);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.clean-tier-2 {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.1;
+}
+
+.clean-tier-3 {
+  font-family: var(--font-body);
+  font-size: 8.5px;
+  color: var(--ink-mid);
+  line-height: 1.4;
+  max-width: 130px;
+}
+
+.clean-seal-pill {
+  background: var(--yellow);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 7.5px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.5px;
+}
+
+.problem__card:hover .clutter-messy-layer,
+.problem__card.active-fix .clutter-messy-layer {
+  opacity: 0;
+  transform: translateY(-16px);
+}
+
+.problem__card:hover .clutter-clean-layer,
+.problem__card.active-fix .clutter-clean-layer {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.problem__card:hover .clutter-pack,
+.problem__card.active-fix .clutter-pack {
+  border-color: var(--ink);
+  box-shadow: 0 16px 32px rgba(26,26,26,0.12);
+}
+
+/* ——— 03 BLAND DTC TRAP VS BRAND CODES SCENE ——— */
+.ghost-scene {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+}
+
+.ghost-pack {
+  width: 160px;
+  height: 220px;
+  border-radius: var(--radius-md);
+  position: relative;
+  transition: all 0.5s var(--ease-spring);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: #ECE8E0;
+  border: 1.5px dashed #BCB6A8;
+}
+
+.ghost-inner-bland {
+  text-align: center;
+  transition: all 0.4s var(--ease-out);
+}
+
+.ghost-square {
+  width: 44px;
+  height: 44px;
+  background: #D8D2C4;
+  border-radius: 4px;
+  margin: 0 auto 12px;
+}
+
+.ghost-text-bar {
+  width: 80px;
+  height: 7px;
+  background: #C8C2B4;
+  border-radius: 3px;
+  margin: 0 auto 6px;
+}
+
+.ghost-sub-bar {
+  width: 50px;
+  height: 5px;
+  background: #D8D2C4;
+  border-radius: 3px;
+  margin: 0 auto 12px;
+}
+
+.ghost-tag-red {
+  display: inline-block;
+  background: #FF5F56;
+  color: #FFF;
+  font-family: var(--font-sans);
+  font-size: 7px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+}
+
+/* Transformed Distinctive Brand Asset */
+.ghost-inner-equity {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.45s var(--ease-spring);
+  background: #FAF8F2;
+  border-radius: var(--radius-md);
+}
+
+.equity-seal {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--yellow);
+  border: 2px solid var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(245, 200, 66, 0.4);
+  margin-bottom: 10px;
+}
+
+.equity-seal svg {
+  width: 26px;
+  height: 26px;
+}
+
+.equity-title {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.equity-sub {
+  font-family: var(--font-sans);
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--ink-muted);
+  margin-bottom: 12px;
+}
+
+.equity-tag-green {
+  background: var(--ink);
+  color: var(--yellow);
+  font-family: var(--font-sans);
+  font-size: 7.5px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.5px;
+}
+
+.problem__card:hover .ghost-inner-bland,
+.problem__card.active-fix .ghost-inner-bland {
+  opacity: 0;
+  transform: translateY(-16px);
+}
+
+.problem__card:hover .ghost-inner-equity,
+.problem__card.active-fix .ghost-inner-equity {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.problem__card:hover .ghost-pack,
+.problem__card.active-fix .ghost-pack {
+  border-style: solid;
+  border-color: var(--ink);
+  box-shadow: 0 16px 32px rgba(26,26,26,0.12);
+  transform: scale(1.04);
+}
+
+/* ——— Card text content ——— */
+.problem__card-text {
+  padding: var(--space-8);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.problem__card-text h3 {
+  font-family: var(--font-sans);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: var(--space-2);
+}
+
+.problem__card-text p {
+  font-size: var(--text-sm);
+  color: var(--ink-mid);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+  flex: 1;
+}
+
+.problem-stat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--canvas-off);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: var(--space-3);
+  width: fit-content;
+}
+
+.problem-stat-pill span {
+  color: var(--yellow-dark);
+}
+
+.problem-hint {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: var(--yellow-dark);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ——— Shelf Audit Comparative Benchmark Matrix ——— */
+.problem__matrix {
+  background: var(--canvas-card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-10);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--space-20);
+}
+
+.problem__matrix-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: var(--space-6);
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.matrix-title {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.matrix-subtitle {
+  font-size: var(--text-xs);
+  color: var(--ink-muted);
+  font-family: var(--font-sans);
+}
+
+.problem__matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+}
+
+.problem__matrix-table th {
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.problem__matrix-table td {
+  padding: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--ink-mid);
+  border-bottom: 1px solid rgba(228, 224, 216, 0.6);
+  vertical-align: middle;
+}
+
+.problem__matrix-table tr:last-child td {
+  border-bottom: none;
+}
+
+.td-metric {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.td-bad {
+  color: #888;
+  background: rgba(26,26,26,0.02);
+}
+
+.td-good {
+  font-weight: 700;
+  color: var(--ink);
+  background: rgba(245, 200, 66, 0.1);
+  border-radius: var(--radius-sm);
+}
+
+.td-good span {
+  color: var(--yellow-dark);
+}
+
+/* ——— Big statement ——— */
+.problem__statement {
+  text-align: center;
+  padding: var(--space-12) 0 0;
+}
+
+.problem__big-line {
+  font-family: var(--font-serif);
+  font-size: clamp(var(--text-3xl), 6vw, var(--text-6xl));
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+.problem__big-line em {
+  font-style: italic;
+}
+
+/* ——— Responsive ——— */
+@media (max-width: 960px) {
+  .problem__grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin-inline: auto;
+  }
+  .problem__matrix {
+    padding: var(--space-6);
+    overflow-x: auto;
+  }
+  .problem__matrix-table {
+    min-width: 480px;
+  }
+}

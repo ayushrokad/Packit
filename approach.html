@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Approach — How PackIt Builds Brand Identity | Surat, Gujarat</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <meta name="description" content="Discover the PackIt method: How we build complete business identities and standout packaging for local and emerging brands from Surat, Gujarat." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <style>
+    .approach-hero {
+      padding-top: calc(var(--nav-height) + var(--space-16));
+      padding-bottom: var(--space-20);
+      background: var(--canvas);
+    }
+    .approach-flow {
+      max-width: 900px;
+      margin-inline: auto;
+      padding-bottom: var(--space-32);
+      position: relative;
+    }
+    .flow-line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 32px;
+      width: 2px;
+      background: var(--border);
+      z-index: 0;
+    }
+    .flow-step {
+      display: flex;
+      gap: var(--space-8);
+      margin-bottom: var(--space-16);
+      position: relative;
+      z-index: 1;
+    }
+    .flow-node {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--canvas-card);
+      border: 2px solid var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: var(--text-md);
+      color: var(--ink);
+      flex-shrink: 0;
+      box-shadow: var(--shadow-sm);
+    }
+    .flow-step:hover .flow-node {
+      background: var(--yellow);
+      border-color: var(--yellow);
+    }
+    .flow-card {
+      flex: 1;
+      background: var(--canvas-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-10);
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--duration-med) var(--ease-out), box-shadow var(--duration-med);
+    }
+    .flow-step:hover .flow-card {
+      transform: translateX(8px);
+      box-shadow: var(--shadow-md);
+    }
+    .flow-phase {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      color: var(--yellow-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: var(--space-2);
+    }
+    .flow-title {
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-4);
+    }
+    .flow-p {
+      color: var(--ink-mid);
+      line-height: 1.7;
+      margin-bottom: var(--space-4);
+      font-size: var(--text-base);
+    }
+    .flow-bullets {
+      background: var(--canvas-off);
+      padding: var(--space-6);
+      border-radius: var(--radius-md);
+      font-size: var(--text-sm);
+    }
+    .flow-bullets li {
+      margin-bottom: var(--space-2);
+      color: var(--ink-mid);
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+    .flow-bullets li::before {
+      content: '✓';
+      color: var(--yellow-dark);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled" id="main-nav">
+    <a href="/index.html" class="nav__logo" aria-label="PackIt">
+      <img src="assets/images/logo.png" alt="PackIt" class="nav__logo-img" />
+    </a>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="/work.html">Work</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/approach.html" style="color:var(--ink); font-weight:700;">Approach</a></li>
+      <li><a href="/industries.html">Industries</a></li>
+      <li><a href="/about.html">About</a></li>
+    </ul>
+    <a href="/start.html" class="btn btn--primary nav__cta">Start a project</a>
+    <button class="nav__burger" id="nav-burger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="approach-hero">
+    <div class="container" style="text-align:center; max-width:860px;">
+      <p class="section-label">The PackIt Method &middot; Surat, Gujarat</p>
+      <h1 class="hero__headline" style="opacity:1; transform:none; margin-bottom:var(--space-6);">
+        Identity first.<br/><em>Then the box.</em>
+      </h1>
+      <p class="hero__sub" style="opacity:1; transform:none; margin-bottom:var(--space-12);">
+        How we take local and emerging businesses from generic packaging to memorable, shelf-commanding brand identities that customers trust and choose.
+      </p>
+    </div>
+  </main>
+
+  <section class="container">
+    <div class="approach-flow">
+      <div class="flow-line"></div>
+
+      <!-- Step 1 -->
+      <div class="flow-step">
+        <div class="flow-node">01</div>
+        <div class="flow-card">
+          <span class="flow-phase">Phase 01 — Discovery</span>
+          <h2 class="flow-title">How we understand products</h2>
+          <p class="flow-p">We strip away marketing speak and look at the physical artifact. What does it actually do? Where does it live in the consumer's daily routine? What are people feeling when they reach for it?</p>
+          <ul class="flow-bullets">
+            <li>Unpacking the product formulation and physical constraints</li>
+            <li>In-store and digital retail competitive audit</li>
+            <li>Direct consumer perception mapping</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="flow-step">
+        <div class="flow-node">02</div>
+        <div class="flow-card">
+          <span class="flow-phase">Phase 02 — Strategy</span>
+          <h2 class="flow-title">How we find the idea</h2>
+          <p class="flow-p">Every successful product owns a singular, undeniable idea. We distill your category advantage down to one sentence that guides every aesthetic and packaging decision.</p>
+          <ul class="flow-bullets">
+            <li>Pinpointing the core brand narrative hook</li>
+            <li>Positioning against both incumbent dinosaurs and bland imitators</li>
+            <li>Naming validation and legal trademark viability review</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="flow-step">
+        <div class="flow-node">03</div>
+        <div class="flow-card">
+          <span class="flow-phase">Phase 03 — Identity</span>
+          <h2 class="flow-title">How we build the identity</h2>
+          <p class="flow-p">We construct a custom design system centered around packability. Typography that commands attention at distance, color palettes that block shelves, and marks that emboss cleanly on cardboard.</p>
+          <ul class="flow-bullets">
+            <li>Editorial typography and expressive letterforms</li>
+            <li>Chromatic palette engineered for print spot color consistency</li>
+            <li>Iconography and brand vocabulary objects</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="flow-step">
+        <div class="flow-node">04</div>
+        <div class="flow-card">
+          <span class="flow-phase">Phase 04 — Packaging Design</span>
+          <h2 class="flow-title">How we design packaging</h2>
+          <p class="flow-p">We turn 2D identity into tactile 3D objects. From dielines and closures to soft-touch varnishes and foil details, we engineer every millimeter of the physical pack.</p>
+          <ul class="flow-bullets">
+            <li>Full dieline engineering and structural prototypes</li>
+            <li>Visual hierarchy tailored for the 3-second shelf test</li>
+            <li>Sustainable substrate recommendations & FSC compliance</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="flow-step">
+        <div class="flow-node">05</div>
+        <div class="flow-card">
+          <span class="flow-phase">Phase 05 — Production</span>
+          <h2 class="flow-title">How we prepare it for the real world</h2>
+          <p class="flow-p">Design that can't be manufactured profitably is just decoration. We run pre-flight press checks, liaise directly with manufacturing plants, and ensure what rolls off the line looks identical to the approved render.</p>
+          <ul class="flow-bullets">
+            <li>Printer-calibrated color separations and spot varnishes</li>
+            <li>Co-packer handoff dossiers and production specifications</li>
+            <li>Digital e-commerce 3D renders ready for retail launch</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="final-cta">
+    <div class="container" style="text-align:center;">
+      <h2 class="final-cta__headline">Ready to take your product<br/><em>through the process?</em></h2>
+      <a href="/start.html" class="btn btn--primary btn--xl">Start a project →</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/index.html" class="nav__logo" aria-label="PackIt">
+            <img src="assets/images/logo.png" alt="PackIt" class="nav__logo-img" />
+          </a>
+          <p class="footer__tagline">Branding &amp; Packaging Studio.<br/>Empowering local &amp; emerging businesses from Surat, Gujarat.</p>
+        </div>
+        <div class="footer__nav">
+          <div class="footer__col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="/services.html#strategy">Brand Strategy</a></li>
+              <li><a href="/services.html#identity">Brand Identity</a></li>
+              <li><a href="/services.html#packaging">Packaging Design</a></li>
+              <li><a href="/services.html#experience">Brand Experience</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Industries</h4>
+            <ul>
+              <li><a href="/industries.html#food">Food &amp; Beverage</a></li>
+              <li><a href="/industries.html#fashion">Fashion &amp; Apparel</a></li>
+              <li><a href="/industries.html#beauty">Beauty &amp; Care</a></li>
+              <li><a href="/industries.html#d2c">D2C &amp; E-commerce</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="/work.html">Work</a></li>
+              <li><a href="/approach.html">Approach</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/start.html">Start a Project</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 PackIt. All rights reserved.</p>
+        <p>Crafted in Surat, Gujarat, India</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

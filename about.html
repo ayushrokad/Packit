@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About PackIt — Brand Identity &amp; Packaging Studio | Surat, Gujarat</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <meta name="description" content="PackIt is an emerging brand identity and packaging design studio based in Surat, Gujarat. We empower local and new businesses to build authentic business identities and standout packaging." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <style>
+    .about-hero {
+      padding-top: calc(var(--nav-height) + var(--space-16));
+      padding-bottom: var(--space-16);
+      background: var(--canvas);
+    }
+    .about-lead {
+      font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+      line-height: 1.15;
+      max-width: 900px;
+      margin-bottom: var(--space-16);
+    }
+    .manifesto-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-16);
+      padding-bottom: var(--space-24);
+      border-bottom: 1px solid var(--border);
+    }
+    @media (max-width: 768px) {
+      .manifesto-grid { grid-template-columns: 1fr; gap: var(--space-8); }
+    }
+    .manifesto-text p {
+      font-size: var(--text-lg);
+      line-height: 1.8;
+      color: var(--ink-mid);
+      margin-bottom: var(--space-6);
+    }
+    .principles-section {
+      padding: var(--space-24) 0;
+    }
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-8);
+      margin-top: var(--space-12);
+    }
+    @media (max-width: 900px) {
+      .principles-grid { grid-template-columns: 1fr; }
+    }
+    .principle-card {
+      background: var(--canvas-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+    }
+    .principle-num {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      color: var(--yellow-dark);
+      letter-spacing: 0.1em;
+      margin-bottom: var(--space-3);
+    }
+    .principle-title {
+      font-size: var(--text-xl);
+      margin-bottom: var(--space-3);
+    }
+    .principle-desc {
+      font-size: var(--text-sm);
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+    .object-library-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-6);
+      margin-top: var(--space-12);
+    }
+    @media (max-width: 800px) {
+      .object-library-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .obj-item {
+      background: var(--canvas-off);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: var(--space-6);
+      text-align: center;
+      transition: all var(--duration-fast);
+    }
+    .obj-item:hover {
+      background: var(--yellow-light);
+      border-color: var(--yellow);
+    }
+    .obj-item-icon {
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-2);
+      display: block;
+    }
+    .obj-item-name {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: var(--text-sm);
+      color: var(--ink);
+    }
+    .obj-item-role {
+      font-size: var(--text-xs);
+      color: var(--ink-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled" id="main-nav">
+    <a href="/index.html" class="nav__logo" aria-label="PackIt">
+      <img src="assets/images/logo.png" alt="PackIt" class="nav__logo-img" />
+    </a>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="/work.html">Work</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/approach.html">Approach</a></li>
+      <li><a href="/industries.html">Industries</a></li>
+      <li><a href="/about.html" style="color:var(--ink); font-weight:700;">About</a></li>
+    </ul>
+    <a href="/start.html" class="btn btn--primary nav__cta">Start a project</a>
+    <button class="nav__burger" id="nav-burger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="about-hero">
+    <div class="container">
+      <p class="section-label">About the Studio &middot; Surat, Gujarat</p>
+      <h1 class="about-lead">
+        We help local &amp; emerging businesses build their true identity.<br/>
+        <em>Because great products deserve more than just a box.</em>
+      </h1>
+
+      <div class="manifesto-grid">
+        <div class="manifesto-text">
+          <p>
+            We are a fresh, dedicated team of creators starting our journey right here in Surat, Gujarat — a powerhouse of trade, textiles, craftsmanship, and entrepreneurial drive.
+          </p>
+          <p>
+            We saw firsthand that ambitious local businesses and new founders pour immense dedication into making outstanding products, only to wrap them in ordinary, off-the-shelf packaging that whispers in the crowd.
+          </p>
+        </div>
+        <div class="manifesto-text">
+          <p>
+            PackIt was born to change that. We don't just produce simple packaging; we partner with you to uncover and define your complete business identity — from core brand story and visual systems to calibrated structural dielines and tactile finishes.
+          </p>
+          <p>
+            Our mission is simple: empower homegrown and emerging brands with the identity and packaging presence to stand proudly beside the biggest names on any shelf.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="principles-section">
+    <div class="container">
+      <p class="section-label">Studio Principles</p>
+      <h2 style="font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl));">How we make decisions</h2>
+
+      <div class="principles-grid">
+        <div class="principle-card">
+          <span class="principle-num">01 / IDENTITY FIRST</span>
+          <h3 class="principle-title">Identity before the box</h3>
+          <p class="principle-desc">Packaging without an identity is just cardboard. We define your brand's unique reason for being, personality, and visual anchor before touching a dieline.</p>
+        </div>
+        <div class="principle-card">
+          <span class="principle-num">02 / HOMEGROWN PRIDE</span>
+          <h3 class="principle-title">Local roots, global benchmark</h3>
+          <p class="principle-desc">Rooted in Surat, Gujarat, we bring international-grade design rigor, typography, and finishing craft to local and emerging Indian businesses.</p>
+        </div>
+        <div class="principle-card">
+          <span class="principle-num">03 / TACTILE CRAFT</span>
+          <h3 class="principle-title">Engineered to be held</h3>
+          <p class="principle-desc">Packaging lives in hands and homes. We design for tactile weight, paper grain, functional closures, and unforgettable unboxing moments.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: var(--space-24);">
+        <p class="section-label">Visual Vocabulary</p>
+        <h2 style="font-size: var(--text-2xl); font-family:var(--font-sans); font-weight:700;">PackIt Core Objects</h2>
+        <p style="color:var(--ink-muted); margin-top:var(--space-2); max-width:540px;">
+          Like a physical packaging bench, our brand system is represented by a curated vocabulary of physical metaphors.
+        </p>
+
+        <div class="object-library-grid">
+          <div class="obj-item">
+            <span class="obj-item-icon">🧭</span>
+            <div class="obj-item-name">Compass</div>
+            <div class="obj-item-role">Brand Strategy</div>
+          </div>
+          <div class="obj-item">
+            <span class="obj-item-icon">🎯</span>
+            <div class="obj-item-name">Target</div>
+            <div class="obj-item-role">Positioning</div>
+          </div>
+          <div class="obj-item">
+            <span class="obj-item-icon">🏷️</span>
+            <div class="obj-item-name">Label</div>
+            <div class="obj-item-role">Brand Identity</div>
+          </div>
+          <div class="obj-item">
+            <span class="obj-item-icon">📦</span>
+            <div class="obj-item-name">Box</div>
+            <div class="obj-item-role">Packaging Design</div>
+          </div>
+          <div class="obj-item">
+            <span class="obj-item-icon">🏪</span>
+            <div class="obj-item-name">Shelf</div>
+            <div class="obj-item-role">Retail Presence</div>
+          </div>
+          <div class="obj-item">
+            <span class="obj-item-icon">📱</span>
+            <div class="obj-item-name">Phone</div>
+            <div class="obj-item-role">Digital Commerce</div>
+          </div>
+          <div class="obj-item">
+            <span class="obj-item-icon">✨</span>
+            <div class="obj-item-name">Spark</div>
+            <div class="obj-item-role">The Core Idea</div>
+          </div>
+          <div class="obj-item">
+            <span class="obj-item-icon">🎁</span>
+            <div class="obj-item-name">Open Box</div>
+            <div class="obj-item-role">Experience Ritual</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="final-cta">
+    <div class="container" style="text-align:center;">
+      <h2 class="final-cta__headline">Let's make something<br/><em>extraordinary together.</em></h2>
+      <a href="/start.html" class="btn btn--primary btn--xl">Start a project →</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/index.html" class="nav__logo" aria-label="PackIt">
+            <img src="assets/images/logo.png" alt="PackIt" class="nav__logo-img" />
+          </a>
+          <p class="footer__tagline">Branding &amp; Packaging Studio.<br/>Empowering local &amp; emerging businesses from Surat, Gujarat.</p>
+        </div>
+        <div class="footer__nav">
+          <div class="footer__col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="/services.html#strategy">Brand Strategy</a></li>
+              <li><a href="/services.html#identity">Brand Identity</a></li>
+              <li><a href="/services.html#packaging">Packaging Design</a></li>
+              <li><a href="/services.html#experience">Brand Experience</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Industries</h4>
+            <ul>
+              <li><a href="/industries.html#food">Food &amp; Beverage</a></li>
+              <li><a href="/industries.html#fashion">Fashion &amp; Apparel</a></li>
+              <li><a href="/industries.html#beauty">Beauty &amp; Care</a></li>
+              <li><a href="/industries.html#d2c">D2C &amp; E-commerce</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="/work.html">Work</a></li>
+              <li><a href="/approach.html">Approach</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/start.html">Start a Project</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 PackIt. All rights reserved.</p>
+        <p>Crafted in Surat, Gujarat, India</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

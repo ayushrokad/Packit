@@ -1,0 +1,367 @@
+/* ===========================
+   OPEN BOX — PackIt (3D Interactive Chamber)
+   =========================== */
+
+.open-box {
+  padding: var(--space-40) 0;
+  background: var(--canvas);
+  overflow: hidden;
+  position: relative;
+}
+
+.open-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(245,200,66,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.open-box__intro {
+  text-align: center;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-8);
+  margin-bottom: var(--space-16);
+}
+
+.open-box__intro h2 {
+  font-size: clamp(var(--text-4xl), 7vw, var(--text-6xl));
+  color: var(--ink);
+}
+
+/* ——— Scene wrapper ——— */
+.open-box__scene {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.ob-container {
+  position: relative;
+  width: 460px;
+  height: 460px;
+  max-width: 100%;
+  perspective: 1200px;
+}
+
+/* ——— Central Box Body / Chamber ——— */
+.ob-box {
+  position: absolute;
+  inset: 60px;
+  z-index: 2;
+  transform-style: preserve-3d;
+}
+
+.ob-box__body {
+  width: 100%;
+  height: 100%;
+  background: var(--canvas-card);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    0 24px 60px rgba(26,26,26,0.12),
+    inset 0 0 30px rgba(245, 200, 66, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s var(--ease-out);
+}
+
+.ob-box__center {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  transition: all 0.4s var(--ease-out);
+  width: 100%;
+  padding: var(--space-6);
+}
+
+.ob-revealed-object {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto var(--space-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s var(--ease-spring);
+}
+
+.ob-revealed-object svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ob-label {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--yellow-dark);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.ob-headline {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  font-style: italic;
+  color: var(--ink);
+}
+
+/* ——— 3D Interactive Flaps ——— */
+.ob-flap {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: var(--canvas-card);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.65s var(--ease-spring);
+  z-index: 4;
+  box-shadow: var(--shadow-md);
+  transform-style: preserve-3d;
+  user-select: none;
+}
+
+.ob-flap:hover {
+  box-shadow: var(--shadow-xl);
+  border-color: var(--yellow);
+}
+
+.ob-flap.is-open {
+  background: var(--yellow);
+  border-color: var(--ink);
+  box-shadow: 0 20px 40px rgba(245, 200, 66, 0.4);
+}
+
+/* Flap Positions */
+.ob-flap--tl {
+  top: 0;
+  left: 0;
+  transform-origin: bottom right;
+}
+
+.ob-flap--tr {
+  top: 0;
+  right: 0;
+  transform-origin: bottom left;
+}
+
+.ob-flap--bl {
+  bottom: 0;
+  left: 0;
+  transform-origin: top right;
+}
+
+.ob-flap--br {
+  bottom: 0;
+  right: 0;
+  transform-origin: top left;
+}
+
+/* 3D Outward Rotation on Open */
+.ob-flap--tl.is-open {
+  transform: rotate3d(1, -1, 0, 48deg) translate(-28px, -28px);
+}
+
+.ob-flap--tr.is-open {
+  transform: rotate3d(1, 1, 0, 48deg) translate(28px, -28px);
+}
+
+.ob-flap--bl.is-open {
+  transform: rotate3d(-1, -1, 0, 48deg) translate(-28px, 28px);
+}
+
+.ob-flap--br.is-open {
+  transform: rotate3d(-1, 1, 0, 48deg) translate(28px, 28px);
+}
+
+/* Flap Face Content */
+.ob-flap__face {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.ob-flap__icon {
+  width: 44px;
+  height: 44px;
+  color: var(--ink);
+  transition: transform 0.4s var(--ease-spring);
+}
+
+.ob-flap:hover .ob-flap__icon {
+  transform: scale(1.15) rotate(-3deg);
+}
+
+.ob-flap__face span {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+/* Quick Action Switcher Controls */
+.ob-quick-controls {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--space-4);
+}
+
+.ob-quick-btn {
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: var(--canvas-card);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--ink-mid);
+  cursor: pointer;
+  transition: all var(--duration-fast);
+}
+
+.ob-quick-btn:hover, .ob-quick-btn.active {
+  background: var(--ink);
+  color: var(--canvas);
+  border-color: var(--ink);
+}
+
+/* Narrative Output Box */
+.ob-description {
+  max-width: 600px;
+  text-align: center;
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--canvas-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-10);
+  box-shadow: var(--shadow-sm);
+}
+
+.ob-description__text {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--ink-mid);
+  line-height: 1.7;
+  transition: opacity 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+}
+
+/* Deliverables Inventory Grid */
+.ob-inventory {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  margin-top: var(--space-16);
+  padding-inline: var(--space-8);
+  width: 100%;
+}
+
+.ob-inventory__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.ob-inv-card {
+  background: var(--canvas-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--duration-fast);
+}
+
+.ob-inv-card:hover {
+  border-color: var(--yellow);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.ob-inv-tag {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--yellow-dark);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.ob-inv-title {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: var(--space-2);
+}
+
+.ob-inv-desc {
+  font-size: var(--text-xs);
+  color: var(--ink-mid);
+  line-height: 1.5;
+  flex: 1;
+  margin-bottom: var(--space-4);
+}
+
+.ob-inv-spec {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  color: var(--ink-muted);
+  border-top: 1px solid var(--border);
+  padding-top: var(--space-3);
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .ob-inventory__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .ob-container {
+    width: 300px;
+    height: 300px;
+  }
+  .ob-box {
+    inset: 35px;
+  }
+  .ob-flap {
+    width: 98px;
+    height: 98px;
+  }
+  .ob-revealed-object {
+    width: 44px;
+    height: 44px;
+  }
+  .ob-headline {
+    font-size: var(--text-lg);
+  }
+  .ob-inventory__grid {
+    grid-template-columns: 1fr;
+  }
+}

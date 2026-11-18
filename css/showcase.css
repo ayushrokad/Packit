@@ -1,0 +1,387 @@
+/* ===========================
+   SHOWCASE & DISCIPLINES — PackIt (Visual-First Experience)
+   =========================== */
+
+/* ——— Ticker Marquee ——— */
+.studio-ticker {
+  background: var(--ink);
+  color: var(--canvas);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: var(--space-4) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.studio-ticker__track {
+  display: inline-flex;
+  gap: var(--space-8);
+  animation: tickerSlide 28s linear infinite;
+}
+
+.studio-ticker__track:hover {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.ticker-item .ticker-star {
+  color: var(--yellow);
+  font-size: 14px;
+}
+
+@keyframes tickerSlide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ——— 02 Selected Formats Showcase ——— */
+.showcase {
+  padding: var(--space-24) 0;
+  background: var(--canvas);
+  position: relative;
+}
+
+.showcase__intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+}
+
+.showcase__headline {
+  font-family: var(--font-serif);
+  font-size: clamp(var(--text-3xl), 4.5vw, var(--text-5xl));
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--ink);
+}
+
+.showcase__sub {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--ink-mid);
+  max-width: 440px;
+  line-height: 1.55;
+}
+
+/* 4-Card Visual Grid */
+.showcase__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+}
+
+.showcase-card {
+  background: var(--canvas-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--duration-normal) var(--ease-out);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.showcase-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-color: var(--ink);
+}
+
+.showcase-card__visual {
+  height: 340px;
+  background: var(--canvas-off);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: var(--space-6);
+}
+
+.showcase-card__visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.7) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Card Badge Pill */
+.showcase-card__tag {
+  position: absolute;
+  top: var(--space-5);
+  left: var(--space-5);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  z-index: 2;
+}
+
+.showcase-card__finish {
+  position: absolute;
+  top: var(--space-5);
+  right: var(--space-5);
+  background: var(--ink);
+  color: var(--yellow);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.showcase-card__illustration {
+  width: 100%;
+  max-width: 260px;
+  height: 240px;
+  transition: transform var(--duration-normal) var(--ease-out);
+  filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.12));
+}
+
+.showcase-card:hover .showcase-card__illustration {
+  transform: scale(1.04) translateY(-4px);
+}
+
+.showcase-card__body {
+  padding: var(--space-6) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  flex-grow: 1;
+}
+
+.showcase-card__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--ink);
+}
+
+.showcase-card__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.showcase-pill {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 11px;
+  color: var(--ink-muted);
+  background: var(--canvas-off);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.showcase-card__desc {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--ink-mid);
+  line-height: 1.5;
+  margin-top: var(--space-1);
+}
+
+/* ——— Visual Studio Disciplines ——— */
+.disciplines {
+  padding: var(--space-24) 0;
+  background: var(--canvas-off);
+  position: relative;
+  border-top: 1px solid var(--border);
+}
+
+.disciplines__intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+}
+
+.disciplines__headline {
+  font-family: var(--font-serif);
+  font-size: clamp(var(--text-3xl), 4.5vw, var(--text-5xl));
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--ink);
+}
+
+.disciplines__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.discipline-card {
+  background: var(--canvas-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-8) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  transition: all var(--duration-normal) var(--ease-out);
+  position: relative;
+}
+
+.discipline-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--ink);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.06);
+}
+
+.discipline-card__num {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--text-2xl);
+  color: var(--yellow-dark);
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.discipline-card__icon {
+  width: 56px;
+  height: 56px;
+  margin-block: var(--space-2);
+}
+
+.discipline-card__title {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-lg);
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.discipline-card__desc {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--ink-mid);
+  line-height: 1.5;
+}
+
+.discipline-card__tag {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: auto;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border);
+}
+
+/* ——— Studio Typographic Statement Banner ——— */
+.studio-statement {
+  background: var(--ink);
+  color: var(--canvas);
+  padding: var(--space-24) 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.studio-statement::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 250px;
+  background: radial-gradient(ellipse, rgba(245, 200, 66, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.studio-statement__inner {
+  max-width: 960px;
+  margin-inline: auto;
+  padding-inline: var(--space-8);
+  position: relative;
+  z-index: 1;
+}
+
+.studio-statement__label {
+  color: var(--yellow);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--text-xs);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-4);
+  display: inline-block;
+}
+
+.studio-statement__headline {
+  font-family: var(--font-serif);
+  font-size: clamp(var(--text-3xl), 4.8vw, var(--text-6xl));
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--canvas);
+  margin-bottom: var(--space-6);
+}
+
+.studio-statement__headline em {
+  font-style: italic;
+  color: var(--yellow);
+}
+
+.studio-statement__sub {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 580px;
+  margin-inline: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .showcase__grid {
+    grid-template-columns: 1fr;
+  }
+  .disciplines__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .showcase-card__visual {
+    height: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .disciplines__grid {
+    grid-template-columns: 1fr;
+  }
+  .showcase-card__visual {
+    height: 240px;
+  }
+}

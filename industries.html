@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industries & Sectors — PackIt Studio</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <meta name="description" content="Sector-specific branding and packaging solutions for Food & Beverage, Fashion, Beauty, Lifestyle, and D2C brands." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <style>
+    .ind-hero {
+      padding-top: calc(var(--nav-height) + var(--space-16));
+      padding-bottom: var(--space-16);
+      background: var(--canvas);
+    }
+    .ind-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-8);
+      padding-bottom: var(--space-32);
+    }
+    @media (max-width: 960px) {
+      .ind-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .ind-grid { grid-template-columns: 1fr; }
+    }
+    .ind-card {
+      background: var(--canvas-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      display: flex;
+      flex-direction: column;
+      transition: all var(--duration-med) var(--ease-out);
+    }
+    .ind-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--yellow);
+    }
+    .ind-icon-box {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-md);
+      background: var(--canvas-off);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-6);
+    }
+    .ind-card:hover .ind-icon-box {
+      background: var(--yellow-light);
+    }
+    .ind-card h2 {
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-3);
+    }
+    .ind-card p {
+      font-size: var(--text-sm);
+      color: var(--ink-mid);
+      line-height: 1.6;
+      margin-bottom: var(--space-6);
+      flex: 1;
+    }
+    .ind-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      border-top: 1px solid var(--border);
+      padding-top: var(--space-4);
+    }
+    .ind-tag {
+      font-size: var(--text-xs);
+      background: var(--canvas-off);
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      color: var(--ink-muted);
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled" id="main-nav">
+    <a href="/index.html" class="nav__logo" aria-label="PackIt">
+      <img src="assets/images/logo.png" alt="PackIt" class="nav__logo-img" />
+    </a>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="/work.html">Work</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/approach.html">Approach</a></li>
+      <li><a href="/industries.html" style="color:var(--ink); font-weight:700;">Industries</a></li>
+      <li><a href="/about.html">About</a></li>
+    </ul>
+    <a href="/start.html" class="btn btn--primary nav__cta">Start a project</a>
+    <button class="nav__burger" id="nav-burger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="ind-hero">
+    <div class="container">
+      <p class="section-label">Tailored Sector Expertise</p>
+      <h1 class="hero__headline" style="opacity:1; transform:none; text-align:left; margin-bottom:var(--space-6);">
+        Specialized solutions for<br/><em>physical product categories.</em>
+      </h1>
+      <p class="hero__sub" style="opacity:1; transform:none; margin-left:0; text-align:left;">
+        Different shelves have distinct rules. We design packaging systems calibrated for the regulatory, sensory, and competitive dynamics of your sector.
+      </p>
+    </div>
+  </main>
+
+  <section class="container">
+    <div class="ind-grid">
+      <!-- 1 Food & Beverage -->
+      <div class="ind-card" id="food">
+        <div class="ind-icon-box">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M7 6 H21 V18 A7 7 0 0 1 7 18 Z"/>
+            <line x1="14" y1="2" x2="14" y2="6"/>
+          </svg>
+        </div>
+        <h2>Food & Beverage</h2>
+        <p>Appetite appeal, nutritional compliance, stand-up pouch barrier engineering, and cold-chain bottle design that wins grocery shelf space.</p>
+        <div class="ind-tags">
+          <span class="ind-tag">Stand-up Pouches</span>
+          <span class="ind-tag">Glass & Amber</span>
+          <span class="ind-tag">Multipack Cartons</span>
+        </div>
+      </div>
+
+      <!-- 2 Fashion & Apparel -->
+      <div class="ind-card" id="fashion">
+        <div class="ind-icon-box">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M5 9 L10 5 L14 8 L18 5 L23 9 L20 23 H8 Z"/>
+          </svg>
+        </div>
+        <h2>Fashion & Apparel</h2>
+        <p>Elevated garment packaging, paper tape closures, FSC-certified hangtags, and plastic-free unboxing rituals for contemporary fashion houses.</p>
+        <div class="ind-tags">
+          <span class="ind-tag">Rigid Apparel Boxes</span>
+          <span class="ind-tag">Embossed Hangtags</span>
+          <span class="ind-tag">Zero-Poly Mailers</span>
+        </div>
+      </div>
+
+      <!-- 3 Beauty & Personal Care -->
+      <div class="ind-card" id="beauty">
+        <div class="ind-icon-box">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="9" y="8" width="10" height="16" rx="3"/>
+            <path d="M12 4 H16 V8 H12 Z"/>
+          </svg>
+        </div>
+        <h2>Beauty & Personal Care</h2>
+        <p>Dermatological clarity, soft-touch bottles, pump dispensers, and high-prestige outer cartons that look exquisite on vanity mirrors.</p>
+        <div class="ind-tags">
+          <span class="ind-tag">Serums & Pipettes</span>
+          <span class="ind-tag">Cosmetic Compacts</span>
+          <span class="ind-tag">Outer Cartons</span>
+        </div>
+      </div>
+
+      <!-- 4 Lifestyle -->
+      <div class="ind-card" id="lifestyle">
+        <div class="ind-icon-box">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="14" cy="14" r="9"/>
+            <path d="M14 5 V9 M14 19 V23 M5 14 H9 M19 14 H23"/>
+          </svg>
+        </div>
+        <h2>Lifestyle & Home</h2>
+        <p>Aroma diffusers, candle vessels, ceramics, and tactile home accents where the box is an integral part of the gift-giving ritual.</p>
+        <div class="ind-tags">
+          <span class="ind-tag">Cylinder Tubes</span>
+          <span class="ind-tag">Gift Packaging</span>
+          <span class="ind-tag">Foil Detailing</span>
+        </div>
+      </div>
+
+      <!-- 5 D2C & E-Commerce -->
+      <div class="ind-card" id="d2c">
+        <div class="ind-icon-box">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="4" y="6" width="20" height="16" rx="2"/>
+            <line x1="4" y1="12" x2="24" y2="12"/>
+            <line x1="10" y1="18" x2="14" y2="18"/>
+          </svg>
+        </div>
+        <h2>D2C & E-Commerce</h2>
+        <p>Custom corrugated shippers designed for parcel durability, branded interior printing, easy-open zipper tears, and memorable doorstep moments.</p>
+        <div class="ind-tags">
+          <span class="ind-tag">Shipper Cartons</span>
+          <span class="ind-tag">Tear Strip Strips</span>
+          <span class="ind-tag">Tissue & Tape</span>
+        </div>
+      </div>
+
+      <!-- 6 Consumer Products -->
+      <div class="ind-card" id="consumer">
+        <div class="ind-icon-box">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M5 7 L14 3 L23 7 V19 L14 24 L5 19 Z"/>
+          </svg>
+        </div>
+        <h2>Consumer Goods</h2>
+        <p>Retail-ready club packaging, hang-tab blister cards, counter displays, and durable structural packaging built for heavy-rotation store shelves.</p>
+        <div class="ind-tags">
+          <span class="ind-tag">Blister Cards</span>
+          <span class="ind-tag">Counter Displays</span>
+          <span class="ind-tag">FSC Cardboard</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="final-cta">
+    <div class="container" style="text-align:center;">
+      <h2 class="final-cta__headline">Looking for packaging tailored<br/><em>to your sector?</em></h2>
+      <a href="/start.html" class="btn btn--primary btn--xl">Start a project →</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/index.html" class="nav__logo" aria-label="PackIt">
+            <img src="assets/images/logo.png" alt="PackIt" class="nav__logo-img" />
+          </a>
+          <p class="footer__tagline">Branding &amp; Packaging Studio.<br/>Empowering local &amp; emerging businesses from Surat, Gujarat.</p>
+        </div>
+        <div class="footer__nav">
+          <div class="footer__col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="/services.html#strategy">Brand Strategy</a></li>
+              <li><a href="/services.html#identity">Brand Identity</a></li>
+              <li><a href="/services.html#packaging">Packaging Design</a></li>
+              <li><a href="/services.html#experience">Brand Experience</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Industries</h4>
+            <ul>
+              <li><a href="/industries.html#food">Food &amp; Beverage</a></li>
+              <li><a href="/industries.html#fashion">Fashion &amp; Apparel</a></li>
+              <li><a href="/industries.html#beauty">Beauty &amp; Care</a></li>
+              <li><a href="/industries.html#d2c">D2C &amp; E-commerce</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="/work.html">Work</a></li>
+              <li><a href="/approach.html">Approach</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/start.html">Start a Project</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 PackIt. All rights reserved.</p>
+        <p>Crafted in Surat, Gujarat, India</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
