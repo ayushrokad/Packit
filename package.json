@@ -14,7 +14,7 @@
     "threejs"
   ],
   "author": "PackIt",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "serve": "^14.2.4"
   }
